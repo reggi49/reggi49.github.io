@@ -1,0 +1,650 @@
+
+
+@font-face {
+  font-family: Trajan Pro;
+  src: url(../fonts/TrajanPro-Regular.ttf);
+  
+}
+@font-face {
+  font-family: Antenna;
+  src: url(../fonts/Antenna-Regular.otf);
+
+}
+.width-100{
+  width: 100%;
+}
+footer{
+  display: none;
+}
+*{
+  font-family: "Antenna", Arial, Helvetica, sans-serif;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+.navbar-cust{
+  padding-top: 4rem;
+}
+.banner-title{
+  font-family: "Antenna", Arial, Helvetica, sans-serif;
+  font-size: 38px;
+  font-weight: bold;
+
+  background: -webkit-linear-gradient(#eee, #8b7844);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-top: 1rem;
+
+}
+.bg-detail-product{
+  background-image: linear-gradient(#554431, #8e7c61);
+  box-shadow: 0px 8px 37px -8px black;
+  padding-top: 3rem;
+}
+.white-zonk{
+  height: 100px;
+}
+.title-detail-produk{
+  font-family: "Antenna", Arial, Helvetica, sans-serif;
+  font-size: 38px;
+  font-weight: bold;
+
+  background: -webkit-linear-gradient(#eee, #8b7844);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.padding-0{
+  padding: 0px !important;
+}
+
+h1{font-size: 48; font-weight: bold; margin-bottom: 0px;}
+h2{font-size: 36; font-weight: bold; margin-bottom: 0px;}
+.jargon{
+    /* padding: 20px 300px 0px 300px!important; */
+    background-color: #191919;
+    
+    
+}
+
+/* padding 1-5 satuan REM */
+.pl-1r{padding-left: 1rem;}.pl-15r{padding-left: 1.5rem;}.pl-2r{padding-left: 2rem;}.pl-25r{padding-left: 2.5rem;}.pl-3r{padding-left: 3rem;}.pl-35r{padding-left: 3.5rem;}.pl-4r{padding-left: 4rem;}.pl-45r{padding-left: 4.5rem;}.pl-5r{padding-left: 5rem;}
+.pl-15-rm{padding-left: 15rem;}
+.pr-1r{padding-right: 1rem;}.pr-15r{padding-right: 1.5rem;}.pr-2r{padding-right: 2rem;}.pr-25r{padding-right: 2.5rem;}.pr-3r{padding-right: 3rem;}.pr-35r{padding-right: 3.5rem;}.pr-4r{padding-right: 4rem;}.pr-45r{padding-right: 4.5rem;}.pr-5r{padding-right: 5rem;}
+.pt-1r{padding-top: 1rem;}.pt-15r{padding-top: 1.5rem;}.pt-2r{padding-top: 2rem;}.pt-25r{padding-top: 2.5rem;}.pt-3r{padding-top: 3rem;}.pt-35r{padding-top: 3.5rem;}.pt-4r{padding-top: 4rem;}.pt-45r{padding-top: 4.5rem;}.pt-5r{padding-top: 5rem;}
+.pb-1r{padding-bottom: 1rem;}.pb-15r{padding-bottom: 1.5rem;}.pb-2r{padding-bottom: 2rem;}.pb-25r{padding-bottom: 2.5rem;}.pb-3r{padding-bottom: 3rem;}.pb-35r{padding-bottom: 3.5rem;}.pb-4r{padding-bottom: 4rem;}.pb-45r{padding-bottom: 4.5rem;}.pb-5r{padding-bottom: 5rem;}
+
+.padding-lr0{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.bg-logo-footer{
+  background-color: #cecece;
+}
+.jargon-footer1{
+  font-size: 17px;
+  letter-spacing: 5.5px;
+    font-weight: bold;
+    margin: 10px 0;
+    text-align: left;
+    /* letter-spacing: 2; */
+}
+.banner-footer-logo{
+  margin-top: -30px;
+  margin-bottom: -45px;
+  text-align: right;
+}
+
+.logoMBtech-footer{
+  width: 50%;
+}
+
+.jargon-footer{
+  background-color: #cecece;
+  /* margin-top: 20px; */
+  margin-bottom: 100px;
+}
+.jargon h5{
+    font-size: 22px;
+    font-family: "Trajan Pro", Times, serif;
+    color:#aaaaaa;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0px 10px 0px;
+}
+.jargon-footer h5{
+    font-size: 0.75vw;
+    font-family: "Trajan Pro", Times, serif;
+    color: #444444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.padding-all{
+    padding: 0px 20% 50px 20%!important;
+    background-color: #ffffff;
+}
+.padding-main{
+    /* padding: 0px 300px 0px 300px!important; */
+    background-color: #1E1D1D;
+    padding-top: 20px;
+}
+.padding-detail{
+    /* padding: 0px 300px 0px 300px!important; */
+    background-color: #64533c;
+}
+#fitur{
+  background-color: #000000;
+}
+.padding-fitur{
+    /* padding: 0px 300px 0px 300px!important; */
+    
+    background-color: #e3d9b8;
+}
+.logoMBtech{
+    /* width: 112px; */
+    /* height: 74px; */
+}
+.padding-fitur-ccs{
+  /* background: linear-gradient(#554431, #8e7c61); */
+  background: -webkit-linear-gradient(#e0d6b2, #ffffff);
+  background-color: #000000 ;
+}
+.text-colorWhite{
+    color:#ffffff !important;
+    font-size: 14px;
+}
+.a-linkMenu:hover {
+    color:#FFD600 !important; 
+}
+.menu-header{
+    margin-top: 25px;
+    padding-left: 26text_main1_10px;
+}
+.menu-header a{
+    color: #989898;
+    font-family: "Antenna", Times, serif;
+    font-size: 1.5vw;  
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.menu-header a:hover{
+    color: #ac851d;
+}
+.menu-header a:active {
+  color: #ac851d;
+}
+.banner {
+  padding: 0 19%;
+  margin-top: -45px;
+  margin-bottom: -60px;
+}
+.img-detail{
+  margin:-21% 0;
+}
+.pb-3rem{
+  padding-bottom: 3rem !important;
+}
+.text_main1{
+  font-weight: normal;
+  font-size: 22px;
+}
+.text_main1_1{
+  font-weight: normal;
+  font-size: 20px;
+}
+.text-white{
+  color: #ffffff;
+}
+.ico{
+  width: 60%;
+}
+#padding-top-20{
+  margin-top: 20px;
+}
+
+.footer-icon{
+  text-align: left;
+  margin-bottom: 20px;
+}
+.link_hoverfooter a, .link_hoverfooter svg, .link_hoverfooter path, .link_hoverfooter span{
+  color: #939393 !important;
+  fill: #939393 !important;
+}
+.link_hoverfooter:hover span, .link_hoverfooter:hover path{
+  color:#FFD600 !important;
+  fill: #FFD600 !important;
+}
+.footer-bg1{
+  background-color: #1e1d1d;
+}
+.footer-downloads{
+  margin-top: 0px;
+  font-size: 21px;
+  font-weight: bold;
+}
+
+/* #testing{
+  overflow: hidden;
+} */
+.title-fitur{
+  font-family: "Antenna", Arial, Helvetica, sans-serif;
+  font-size: 44px;
+  font-weight: bold;
+
+  background: -webkit-linear-gradient(#eee, #8b7844);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  display:table-cell;
+  height: 100px;
+  text-align: left;
+  padding-left: 130px;
+  justify-content: center;
+  vertical-align:middle;
+}
+.qr-code{
+  margin: 0 0 30px 100px;
+  padding-top: 20px;
+  background-color: #ffffff;
+}
+.qr-code h3{
+  font-size: 30px;
+  padding-top: 250px;
+  color:#8b7844;
+  font-weight: bold;
+}
+.img-qrcode {
+  margin-top: 30px;
+  /* padding-bottom: 30px; */
+}
+.locator-askmbtech{
+    padding: 50px 10% 50px 10%!important;
+    background-color: #ffffff;
+    background-image: linear-gradient( to right, #FFFFFC, #d1d1d1, #ffffff )
+}
+.locator-askmbtech-last{
+  padding: 50px 10% 50px 10%!important;
+  /* background-color: #ffffff; */
+}
+.container-1{
+  margin-top: 1rem;
+}
+.qr-code p{
+  font-size: 20px;
+  
+}
+.icon-fitur{
+    padding-bottom: 20px;
+    width: 30%;
+}
+/* main2 */
+.padding-all2{
+    /* background-color: #76693e; */
+    background: linear-gradient(70deg, #77683d, #d1c8ab);
+    color:#FFFFFF;
+}
+.text-rightAuto{
+  text-align: right;
+}
+.paddingMain2-fitur{
+  padding-left: 182px !important;
+}
+.custom-line{
+  border:2px solid #ffffff;
+  border-radius: 100px;
+}
+
+/* footer */
+.footer_{
+  padding:30px 300px 25px 300px ;
+  background-color:#282727;
+}
+.logoMBtech_footer{
+  width: 112px;
+  height: 74px;
+  float: left;
+}
+.footerKontak_media{
+  padding-left: 40px;
+}
+.border_kontakMedia, .border_download{
+  border-bottom: 2px solid #ffffff;
+}
+.footer_download{
+  margin-left:20px;
+}
+.burgerIcon{
+  background-color: #ceb013 ;
+}
+.burgerIcon:hover{
+  background-color: #FFD600;
+}
+
+
+@media (min-width: 1281px) {
+  
+    /* CSS */
+    
+
+  }
+  
+  /* 
+    ##Device = Laptops, Desktops
+    ##Screen = B/w 1025px to 1280px
+  */
+  
+  @media (min-width: 1025px) and (max-width: 1280px) {
+    
+    /* CSS */
+    .padding-all{
+        padding: 10px 40px 0px 40px!important;
+        background-color: #1E1D1D;
+        
+    }
+    .padding-main{
+        padding: 30px 30px 0px 0px !important;
+        background-color: #000000;
+    }
+    .padding-all2{
+      padding: 30px 30px 0px 30px !important;
+    }
+    .text-rightAuto{
+      text-align: center;
+    }
+    .paddingMain2-fitur{
+      padding-left: 0px !important;
+    }
+    .footer_{
+      padding: 30px 30px 0px 30px !important;
+    }
+    .logoMBtech_footer{
+      width: 112px;
+      height: 74px;
+      float: none;
+    }
+    .footerKontak_media{
+      padding-left: 30px;
+    }
+    .footer_download{
+      margin-left: 0px;
+    }
+  }
+
+
+  
+  /* 
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) {
+    
+    /* CSS */
+    .padding-all{
+        padding: 10px 40px 0px 40px!important;
+        background-color: #1E1D1D;
+    }
+    .padding-main{
+        padding: 30px 30px 0px 30px !important;
+        background-color: #1E1D1D;
+    }
+    .padding-all2{
+      padding: 30px 30px 0px 30px !important;
+    }
+    .text-rightAuto{
+      text-align: center;
+    }
+    .paddingMain2-fitur{
+      padding-left: 0px !important;
+    }
+    .footer_{
+      padding: 30px 30px 20px 30px !important;
+    }
+    .logoMBtech_footer{
+      width: 112px;
+      height: 74px;
+      float: none;
+      display: none;
+    }
+    .footerKontak_media{
+      padding-left: 30px;
+    }
+    .footer_download{
+      margin-left: 0px;
+    }
+  }
+  
+  /* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+  */
+  
+  /* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+  
+  @media (min-width: 481px) and (max-width: 767px) {
+    
+    /* CSS */
+    .padding-all{
+        padding: 10px 40px 0px 40px!important;
+        background-color: #1E1D1D;
+    }
+    .main-1{
+        padding-top:0px !important;
+    }
+    .padding-main{
+        padding: 30px 30px 0px 30px !important;
+        background-color: #1E1D1D;
+    }
+    .padding-all2{
+      padding: 30px 30px 0px 30px !important;
+    }
+    .text-rightAuto{
+      text-align: center;
+    }
+    .paddingMain2-fitur{
+      padding-left: 0px !important;
+    }
+    .footer_{
+      padding: 30px 30px 20px 30px !important;
+    }
+    .logoMBtech_footer{
+      width: 112px;
+      height: 74px;
+      float: none;
+      display: none;
+    }
+    .footerKontak_media{
+      padding-left: 30px;
+    }
+    .footer_download{
+      margin-left: 0px;
+    }
+  }
+  
+  /* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+  
+  @media (min-width: 320px) and (max-width: 480px) {
+    .jargon-footer1{
+      font-size: 17px;
+      letter-spacing: 0;
+        font-weight: bold;
+        margin-top: 60px;
+        text-align: center;
+    }
+    .banner-footer-logo {
+      margin-top: -40px;
+      margin-bottom: -45px;
+      text-align: center;
+  }
+    .footer-downloads{
+      margin-top: 20px;
+      font-size: 21px;
+    }
+    .img-qrcode img{
+      width: 100%;
+    }
+    .pb-3rem{
+      padding-bottom: 3rem !important;
+    }
+    .padding-lr-m30{
+      padding: 0 30px !important;
+    }
+    .img-detail{
+      margin:0;
+      width: 100%;
+      padding-top: 2rem;
+    }
+    .white-zonk{
+      height: 50px;
+    }
+    .title-detail-produk {
+      font-family: "Antenna", Arial, Helvetica, sans-serif;
+      font-size: 21px;
+      font-weight: bold;
+      background: -webkit-linear-gradient(#eee, #8b7844);
+          background-clip: border-box;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      padding-top: 0rem;
+      padding-bottom: 1rem;
+    }
+    .bg-detail-product{
+     padding-bottom: 3rem;
+    }
+    .text_main1 {
+      font-weight: normal;
+      font-size: 17px;
+    }
+    .pl-15-rm{padding-left: 0rem;}
+    .qr-code{
+      margin: 0;
+      padding-top: 20px;
+      background-color: #ffffff;
+    }
+    .width-100{
+      width: 100%;
+    }
+    .qr-code h3{
+      padding-top: 20px;
+    }
+    .title-fitur{
+      font-size: 41px;
+      padding-left:1.5rem;
+    }
+    .pl-5r{
+      padding: 0px;
+    }
+    .ico{
+      width: 100%;
+      margin-bottom: 20%;
+    }
+    #blank-mobile-1{
+      display: none;
+    }
+    .img-hp1{
+      padding: 0px;
+      margin: 0 auto;
+    }
+    .jargon h5{
+      font-size: 11px;
+      font-family: "Trajan Pro", Times, serif;
+      color:#aaaaaa;
+      /* display: flex; */
+      align-items: center;
+      justify-content: center;
+      margin: 15px 0px 10px 0px;
+  }
+  .container-1{
+    margin-top: 0rem;
+  }
+  .logoMBtech{
+    width: 112px;
+    /* height: 74px; */
+    margin-top: -24px;
+}
+  .banner{
+    padding: 0;
+    margin-top: 0px;
+  }
+    /* CSS */
+    .padding-all{
+        padding: 30px 30px 0px 30px !important;
+        background-color: #1E1D1D;
+    }
+    .padding-main{
+        padding: 30px 30px 0px 30px !important;
+        background-color: #1E1D1D;
+    }
+    .padding-all2{
+      padding: 30px 30px 0px 30px !important;
+    }
+    .text-rightAuto{
+      text-align: center;
+    }
+    .paddingMain2-fitur{
+      padding-left: 0px !important;
+    }
+    .footer_{
+      padding: 30px 30px 20px 30px !important;
+    }
+    .logoMBtech_footer{
+      width: 112px;
+      height: 74px;
+      float: none;
+      display: none;
+    }
+    .footerKontak_media{
+      padding:20px 0 0 0;
+    }
+    .footerKontak_media{
+      padding-left: 30px;
+    }
+    .footer_download{
+      margin-left: 0px;
+    }
+  }
+  @media (max-width:320px){
+      .padding-all{
+        padding: 30px 30px 0px 30px !important;
+        background-color: #1E1D1D;
+      }
+      .padding-all2{
+        padding: 30px 30px 0px 30px !important;
+      }
+      .text-rightAuto{
+        text-align: center;
+      }
+      .paddingMain2-fitur{
+        padding-left: 0px !important;
+      }
+      .footer_{
+        padding: 30px 30px 20px 30px !important;
+      }
+      .logoMBtech_footer{
+        width: 112px;
+        height: 74px;
+        float: none;
+        display: none;
+      }
+      .footerKontak_media{
+        padding-top:20px !important;
+        padding-left: 0px !important;
+      }
+      .footerKontak_media{
+        padding-left: 30px;
+      }
+      .footer_download{
+        margin-left: 0px;
+      }
+  }

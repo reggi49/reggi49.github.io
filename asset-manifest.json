@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.691e5a74.chunk.css",
-    "main.js": "/static/js/main.ee1b0107.chunk.js",
-    "main.js.map": "/static/js/main.ee1b0107.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.b89be5cd.js",
-    "runtime-main.js.map": "/static/js/runtime-main.b89be5cd.js.map",
+    "main.css": "/static/css/main.794eaaae.chunk.css",
+    "main.js": "/static/js/main.99c45d70.chunk.js",
+    "main.js.map": "/static/js/main.99c45d70.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.88420ba6.js",
+    "runtime-main.js.map": "/static/js/runtime-main.88420ba6.js.map",
     "static/css/2.83f49c65.chunk.css": "/static/css/2.83f49c65.chunk.css",
-    "static/js/2.71e97566.chunk.js": "/static/js/2.71e97566.chunk.js",
-    "static/js/2.71e97566.chunk.js.map": "/static/js/2.71e97566.chunk.js.map",
-    "static/js/3.c469a84b.chunk.js": "/static/js/3.c469a84b.chunk.js",
-    "static/js/3.c469a84b.chunk.js.map": "/static/js/3.c469a84b.chunk.js.map",
+    "static/js/2.8b27b60c.chunk.js": "/static/js/2.8b27b60c.chunk.js",
+    "static/js/2.8b27b60c.chunk.js.map": "/static/js/2.8b27b60c.chunk.js.map",
+    "static/js/3.e81ff79f.chunk.js": "/static/js/3.e81ff79f.chunk.js",
+    "static/js/3.e81ff79f.chunk.js.map": "/static/js/3.e81ff79f.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.83f49c65.chunk.css.map": "/static/css/2.83f49c65.chunk.css.map",
-    "static/css/main.691e5a74.chunk.css.map": "/static/css/main.691e5a74.chunk.css.map",
-    "static/js/2.71e97566.chunk.js.LICENSE.txt": "/static/js/2.71e97566.chunk.js.LICENSE.txt",
+    "static/css/main.794eaaae.chunk.css.map": "/static/css/main.794eaaae.chunk.css.map",
+    "static/js/2.8b27b60c.chunk.js.LICENSE.txt": "/static/js/2.8b27b60c.chunk.js.LICENSE.txt",
     "static/media/Style_default.css": "/static/media/TrajanPro-Regular.82d61cae.ttf",
     "static/media/clean-method.49cb6045.png": "/static/media/clean-method.49cb6045.png",
     "static/media/color-collection.3b356fd8.png": "/static/media/color-collection.3b356fd8.png",
@@ -33,10 +33,10 @@
     "static/media/seatmaker-locator.7093b867.png": "/static/media/seatmaker-locator.7093b867.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.b89be5cd.js",
+    "static/js/runtime-main.88420ba6.js",
     "static/css/2.83f49c65.chunk.css",
-    "static/js/2.71e97566.chunk.js",
-    "static/css/main.691e5a74.chunk.css",
-    "static/js/main.ee1b0107.chunk.js"
+    "static/js/2.8b27b60c.chunk.js",
+    "static/css/main.794eaaae.chunk.css",
+    "static/js/main.99c45d70.chunk.js"
   ]
 }

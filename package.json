@@ -1,5 +1,5 @@
 {
-  "homepage": "https://reggi49.github.io/reggi49.github.io",
+  "homepage": "https://reggi49.github.io",
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
@@ -17,8 +17,7 @@
     "bootstrap": "^3.4.1",
     "jquery": "^3.5.1",
     "node-sass": "^4.14.1",
-    "react-bootstrap": "^0.32.4",
-    "react-router-dom": "^5.2.0"
+    "react-bootstrap": "^0.32.4"
   },
   "scripts": {
     "start": "react-scripts start",

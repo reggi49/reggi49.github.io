@@ -122,7 +122,7 @@ const Home = () => {
             </div>
             <div className="col-lg-8 text-justify pl-5r">
               <h2 className="banner-title text-center pt-3r">
-                MBtech E-Catalog
+                MBtech E-Catalogs
               </h2>
               <br></br>
               <div style={{ font: 18, color: "#ffffff" }}>

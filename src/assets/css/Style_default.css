@@ -85,11 +85,11 @@ h2{font-size: 36; font-weight: bold; margin-bottom: 0px;}
   background-color: #cecece;
 }
 .jargon-footer1{
-  font-size: 17px;
+  font-size: 20px;
   letter-spacing: 5.5px;
     font-weight: bold;
     margin: 10px 0;
-    text-align: left;
+    text-align: center;
     /* letter-spacing: 2; */
 }
 .banner-footer-logo{
@@ -324,7 +324,16 @@ h2{font-size: 36; font-weight: bold; margin-bottom: 0px;}
 .burgerIcon:hover{
   background-color: #FFD600;
 }
-
+.portfolio{
+  width: 1000%; 
+  transition-duration: 0.6s; 
+  transform: translate3d(-300px, 0px, 0px);
+}
+.box-portfolio{
+  width: 270px; 
+  float: left; 
+  display: block;
+}
 
 @media (min-width: 1281px) {
   

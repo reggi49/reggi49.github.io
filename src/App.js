@@ -1,8 +1,4 @@
-import React from "react";
-// import * 'bootstrap/dist/css/bootstrap.min.css';
-// import * as bs from 'bootstrap/dist/css/bootstrap.css';
-// import * as bst from 'bootstrap/dist/css/bootstrap-theme.css';
-// import { Navbar } from 'react-bootstrap';
+import React, { useState, useEffect } from 'react';
 import images_logo from "./assets/img/logo_mbtech.png";
 import images_android from "./assets/img/google_play.png";
 import images_ios from "./assets/img/app_store.png";
@@ -37,80 +33,85 @@ import "./assets/css/Style_default.css";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
-function Home() {
+import { createClient } from "contentful";
+import axios from 'axios';
+
+const Home = () => {
   Aos.init({ duration: 1000 });
+  const [articles, setArticles] = useState([]);
+
+  const client = createClient({
+    space: "38v5evtkgftl",
+    accessToken: "kDgiFMQFZAObsWasOixfK8UYG5Ij7E8wmj-UE88zl8Y",
+  });
+
+  const fetchPost = () => {
+    client
+      .getEntries({
+        content_type: "blogPost",
+      })
+      .then(({ items }) => {
+        setArticles(items);
+        console.log(items);
+      })
+      .catch(console.error);
+  }
+  useEffect(() => {
+    fetchPost();
+  },[]);
 
   return (
     <div className="App">
       <div className="container-fluid" id="home">
         {/* main-1 */}
 
-        <div className="row jargon">
-          <div className="col-lg-12 p-0">
-            {/* jargon */}
-            <h5>THE BEST AND THE ORIGINAL QUALITY SYNTHETIC LEATHER</h5>
-          </div>
-        </div>
-
-        <div className="row padding-all">
-          <div className="col-lg-12 p-0">
-            {/* menu dan logo */}
-            <nav
-              className="navbar navbar-expand-lg navbar-light bg-transparent p-0"
-              role="navigation"
-            >
-              <div className="container-fluid">
-                <div className="navbar-header">
-                  <button
-                    type="button"
-                    className="navbar-toggle"
-                    data-toggle="collapse"
-                    data-target="#navbarNavDropdown"
-                    aria-controls="navbarNavDropdown"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                  >
-                    <span className="sr-only">Toggle navigation</span>
-                    <span className="icon-bar"></span>
-                    <span className="icon-bar"></span>
-                    <span className="icon-bar"></span>
-                  </button>
-                  <a className="navbar-brand float-left" href="/">
-                    {/* logo header */}
-                    <img
-                      src={images_logo}
-                      className="img-fluid logoMBtech"
-                      alt="Logo MBtech"
-                    ></img>
-                  </a>
-                </div>
-                <div className="collapse navbar-collapse menu-header">
-                  <ul
-                    className="nav navbar-nav navbar-cust"
-                    id="navbarNavDropdown"
-                  >
-                    <li className="active">
-                      <a href="#">
-                        Home <span className="sr-only">(current)</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#fitur">Fitur</a>
-                    </li>
-                    <li>
-                      <a href="#detail-produk">Detail Produk</a>
-                    </li>
-                    <li>
-                      <a href="#kontak">Kontak</a>
-                    </li>
-                  </ul>
-                </div>
+        <div className="row padding-main">
+          {/* menu dan logo */}
+          <nav
+            className="navbar navbar-expand-lg navbar-light bg-transparent p-0"
+            role="navigation"
+          >
+            <div className="container-fluid">
+              <div className="navbar-header">
+                <button
+                  type="button"
+                  className="navbar-toggle"
+                  data-toggle="collapse"
+                  data-target="#navbarNavDropdown"
+                  aria-controls="navbarNavDropdown"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                >
+                  <span className="sr-only">Toggle navigation</span>
+                  <span className="icon-bar"></span>
+                  <span className="icon-bar"></span>
+                  <span className="icon-bar"></span>
+                </button>
               </div>
-            </nav>
-          </div>
-        </div>
+              <div className="collapse navbar-collapse menu-header">
+                <ul
+                  className="nav navbar-nav navbar-right"
+                  id="navbarNavDropdown"
+                >
+                  <li className="active">
+                    <a href="#">
+                      About <span className="sr-only">(current)</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#portfolio">Portfolio</a>
+                  </li>
+                  <li>
+                    <a href="#services">Services</a>
+                  </li>
+                  <li>
+                    <a href="#contact">Contact</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
 
-        <div className="row padding-main container-1">
           <div className="col-lg-12 banner">
             <div className="col-lg-3 col-xs-12 img-hp1">
               <img
@@ -120,7 +121,9 @@ function Home() {
               ></img>
             </div>
             <div className="col-lg-8 text-justify pl-5r">
-              <h2 class="banner-title text-center pt-3r">MBtech E-Catalog</h2>
+              <h2 className="banner-title text-center pt-3r">
+                MBtech E-Catalog
+              </h2>
               <br></br>
               <div style={{ font: 18, color: "#ffffff" }}>
                 <p className="text_main1_1">
@@ -167,8 +170,8 @@ function Home() {
 
       {/* main-2 */}
       <div className="container-fluid padding-0">
-        <div className="col-lg-12 pb-1r pt-2r" id="fitur">
-          <h5 className="title-fitur">FITUR MBTECH E-CATALOG</h5>
+        <div className="col-lg-12 pb-1r pt-2r" id="portfolio">
+          <h5 className="title-fitur">MY PORTFOLIO</h5>
         </div>
       </div>
       <div className="container-fluid" id="qrcode">
@@ -231,79 +234,34 @@ function Home() {
         <div className="row locator-askmbtech">
           <div className="col-lg-12">
             <div className="row">
-              <section className="col-lg-6 pb-3" data-aos="fade-up">
-                <div className="col-lg-6">
-                  <img
-                    className="img-fluid"
-                    src={images_iconlocator}
-                    style={{ width: "50%", paddingTop: 10 }}
-                    alt="images_iconlocator"
-                  ></img>
-                  <p
-                    className="m-0 pt-3"
-                    style={{
-                      fontSize: "20px ",
-                      fontWeight: "bold",
-                      color: "#C2B682",
-                      paddingTop: 50,
-                    }}
-                  >
-                    NEARBY / LOCATOR
-                  </p>
-                  <p
-                    className="pt-1 text-justify"
-                    style={{ color: "#000", fontSize: "14px" }}
-                  >
-                    Fitur ini akan memudahkan Anda mengetahui lokasi seatmaker
-                    terdekat untuk proses pemasangan produk MBtech. Tinggal
-                    aktifkan GPS Anda untuk menampilkan direktori menuju
-                    seatmaker di Google Maps.
-                  </p>
-                </div>
-                <div className="col-lg-6">
-                  <img
-                    src={images_locator}
-                    className="img-fluid width-100"
-                    alt=""
-                  ></img>
-                </div>
-              </section>
-              <section className="col-lg-6 pb-3" data-aos="fade-up">
-                <div className="col-lg-6">
-                  <img
-                    src={images_askmbtech}
-                    className="img-fluid width-100"
-                    alt=""
-                  ></img>
-                </div>
-                <div className="col-lg-6">
-                  <img
-                    className="img-fluid"
-                    src={images_iconconsultation}
-                    style={{ width: "60%", paddingTop: 20 }}
-                    alt="images_iconconsultation"
-                  ></img>
-                  <p
-                    className="m-0 pt-3"
-                    style={{
-                      fontSize: "20px ",
-                      fontWeight: "bold",
-                      color: "#C2B682",
-                      paddingTop: 50,
-                    }}
-                  >
-                    ASK MBTECH
-                  </p>
-                  <p
-                    className="pt-1 text-justify"
-                    style={{ color: "#000", fontSize: "14px" }}
-                  >
-                    Jika membutuhkan informasi lebih lanjut terkait produk
-                    MBtech, Anda bisa bertanya langsung. Lengkapi form
-                    konsultasi dengan mengisi nama, kategori, serta bahan yang
-                    ingin ditanyakan.
-                  </p>
-                </div>
+              <section className="col-lg-12 pb-3" data-aos="fade-up">
+                <ul class="slides image-box hotel listing-style1 box-portfolio"></ul>
+                {articles.map((item, key) => (
+                  <li classs="box-portfolio">
+                    <article class="box">
+                      <figure>
+                        <a href="#" class="hover-effect popup-gallery">
+                          <img
+                            width="270"
+                            height="160"
+                            alt=""
+                            src="https://i.imgur.com/JN2wkb6.jpg"
+                            draggable="false"
+                          ></img>
+                        </a>
+                      </figure>
+                      <div class="details">
+                        <h4 class="box-title">{item.fields.title}</h4>
+                        <p class="description">{item.fields.description}</p>
+                        <div class="action">
+                          <a class="button btn-small" href="#">
+                            BOOK
+                          </a>
+                        </div>
+                      </div>
+                    </article>
+                  </li>
+                ))}
               </section>
             </div>
           </div>
@@ -318,7 +276,7 @@ function Home() {
                 className="img-fluid w-100 img-detail"
                 src={images_detail}
                 alt="Image Banner E-Catalog"
-                id="detail-produk"
+                id="services"
               ></img>
             </div>
             <div className="col-lg-8 float-right pl-15-rm padding-lr-m30 pb-1r pb-3rem">
@@ -458,13 +416,13 @@ function Home() {
 
       <section
         className="container-fluid footer-bg1 pt-5r padding-lr0"
-        id="kontak"
+        id="contact"
       >
         {/* <div className="row"> */}
         <div className="container pb-5r">
           <div className="row">
-            <div className="col-lg-4">
-              <div className="col-lg-12 footer-icon link_hoverfooter">
+            <div className="col-lg-12">
+              <div className="col-lg-3 footer-icon link_hoverfooter">
                 <a href="/">
                   <img
                     src={image_facebook}
@@ -477,11 +435,11 @@ function Home() {
                     style={{ fontSize: "18px", color: "#939393" }}
                   >
                     {" "}
-                    MBTECH
+                    Faceebook
                   </span>
                 </a>
               </div>
-              <div className="col-lg-12 footer-icon link_hoverfooter">
+              <div className="col-lg-3 footer-icon link_hoverfooter">
                 <a href="/">
                   <img
                     src={image_instagram}
@@ -494,11 +452,11 @@ function Home() {
                     style={{ fontSize: "18px", color: "#939393" }}
                   >
                     {" "}
-                    MBTECHINDONESIA
+                    Instagram
                   </span>
                 </a>
               </div>
-              <div className="col-lg-12 footer-icon link_hoverfooter">
+              <div className="col-lg-3 footer-icon link_hoverfooter">
                 <a href="/">
                   <img
                     src={image_youtube}
@@ -511,11 +469,11 @@ function Home() {
                     style={{ fontSize: "18px", color: "#939393" }}
                   >
                     {" "}
-                    MBTECHTV
+                    Youtube
                   </span>
                 </a>
               </div>
-              <div className="col-lg-12 footer-icon link_hoverfooter">
+              <div className="col-lg-3 footer-icon link_hoverfooter">
                 <a href="/">
                   <img
                     src={image_twitter}
@@ -528,96 +486,9 @@ function Home() {
                     style={{ fontSize: "18px", color: "#939393" }}
                   >
                     {" "}
-                    MBTECHMANIA
+                    Twitter
                   </span>
                 </a>
-              </div>
-            </div>
-
-            <div className="col-lg-4">
-              <div className="col-lg-12 footer-icon link_hoverfooter">
-                <a href="/">
-                  <img
-                    src={image_whatsapp}
-                    width="42"
-                    height="42"
-                    className="d-flex pt-2 pb-2"
-                  ></img>
-                  <span
-                    className="float-left pt-2 pl-1r "
-                    style={{ fontSize: "18px", color: "#939393" }}
-                  >
-                    {" "}
-                    0812-19822323
-                  </span>
-                </a>
-              </div>
-              <div className="col-lg-12 footer-icon link_hoverfooter">
-                <a href="/">
-                  <img
-                    src={image_hotline}
-                    width="42"
-                    height="42"
-                    className="d-flex pt-2 pb-2"
-                  ></img>
-                  <span
-                    className="float-left pt-2 pl-1r"
-                    style={{ fontSize: "18px", color: "#939393" }}
-                  >
-                    {" "}
-                    021-45852298
-                  </span>
-                </a>
-              </div>
-              <div className="col-lg-12 footer-icon link_hoverfooter">
-                <a href="/">
-                  <img
-                    src={image_email}
-                    width="42"
-                    height="42"
-                    className="d-flex pt-2 pb-2"
-                  ></img>
-                  <span
-                    className="float-left pt-2 pl-1r"
-                    style={{ fontSize: "16px", color: "#939393" }}
-                  >
-                    {" "}
-                    SUPPORT@MBTECH.INFO
-                  </span>
-                </a>
-              </div>
-            </div>
-
-            <div className="col-lg-4">
-              <div className="col-lg-12 pt-4">
-                <div className="float-left">
-                  <h5
-                    className="pb-1r footer-downloads"
-                    style={{ fontSize: "18px", color: "#C6C4C4" }}
-                  >
-                    DOWNLOAD APLIKASI MBTECH E-CATALOG DI
-                  </h5>
-                </div>
-                <div className="row">
-                  <div className="col-lg-6 col-xs-6">
-                    <a href="/">
-                      <img
-                        src={images_android}
-                        width="140"
-                        className="d-flex pt-2 pb-2 footer-icon"
-                      ></img>
-                    </a>
-                  </div>
-                  <div className="col-lg-6 col-xs-6">
-                    <a href="/">
-                      <img
-                        src={images_ios}
-                        width="140"
-                        className="d-flex pt-2 pb-2 footer-icon"
-                      ></img>
-                    </a>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -626,28 +497,12 @@ function Home() {
         <div className="container-fluid bg-logo-footer">
           <div className="container ">
             <div className="row">
-              <div className="col-lg-3 banner-footer-logo">
-                <img
-                  src={images_logo}
-                  className="img-fluid logoMBtech-footer align-middle"
-                  alt="Logo MBtech"
-                ></img>
-              </div>
-              <div className="col-lg-9">
-                <h5 className="jargon-footer1">
-                  THE SYMBOL OF QUALITY, COMFORT AND PERFORMANCE
-                </h5>
+              <div className="col-lg-12">
+                <h5 className="jargon-footer1">Muhamad Reggi © 2022</h5>
               </div>
             </div>
           </div>
         </div>
-
-        <div class="container-fluid footer-bg1 pt-3r pb-4r">
-          <span style={{ fontSize: "17px", color: "#939393" }}>
-            MBTECH E-CATALOG DESIGNED BY MBTECH INDONESIA©2021
-          </span>
-        </div>
-        {/* </div> */}
       </section>
 
       {/* <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> */}

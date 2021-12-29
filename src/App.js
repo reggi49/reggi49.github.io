@@ -173,49 +173,41 @@ const Home = () => {
         <div className="row padding-all2">
           <div className="col-lg-12 pt-4 pb-4">
             <section className="row" data-aos="fade-up">
-              <div className="col-lg-5 qr-code">
-                <div className="col-lg-12 pt-1r">
-                  <img
-                    className="img-fluid"
-                    src={images_qrcode}
-                    alt="img_qrcode"
-                  ></img>
-                </div>
-                <h3 className="text-center">SCAN QR CODE </h3>
+              <div className="col-lg-3 qr-code">
+                <h3 className="text-center">Website Application </h3>
                 <p
                   className="text-justify pl-2r pr-2r pb-4r"
                   style={{ color: "#000" }}
                 >
-                  Scan QR Code (Quick Responsive) merupakan layanan dari MBtech
-                  dalam bentuk sebuah stiker. Inovasi berupa kode unik ini
-                  memudahkan seatmaker menjelaskan keaslian produk MBtech.
-                  Seatmaker tinggal menunjukkan QR Code untuk dipindai oleh
-                  konsumen.
+                  Build website with newest technology.
                   <br></br>
-                  <br></br>
-                  QR Code berisikan seputar informasi seatmaker, seperti nama,
-                  alamat, kategori seatmaker, nomor telepon/HP, peta lokasi dan
-                  galeri foto jok.
                 </p>
               </div>
-              <div className="col-lg-6">
+              <div className="col-lg-8">
                 <div className="col-lg-12 img-qrcode pl-5r">
                   <div className="row">
-                    <div className="col-lg-4 col-xs-6 padding-0">
-                      <img
-                        className="img-fluid"
-                        src={images_handqrcode}
-                        alt="hand_qrcode"
-                      ></img>
-                    </div>
-                    <div className="col-lg-6 col-xs-6 padding-0">
-                      <img
-                        className="img-fluid"
-                        src={images_profilesmaker}
-                        alt="profile-seatmaker"
-                      ></img>
-                    </div>
-                    <div className="col-lg-2"></div>
+                  {articles.map((item, key) => (
+                      <div class="col-md-4">
+                        <div class="card p-3">
+                          <div class="d-flex flex-row mb-3">
+                            <img
+                              src={item.fields.heroImage.fields.file.url}
+                              width="300"
+                            ></img>
+                            <div class="d-flex flex-column ml-2">
+                              <span>{item.fields.title}</span>
+                            </div>
+                          </div>
+                          <h6>{item.fields.description}.</h6>
+                          <div class="d-flex justify-content-between install mt-3">
+                            <span>Installed 172 times</span>
+                            <span class="text-primary">
+                              View&nbsp;<i class="fa fa-angle-right"></i>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
@@ -228,31 +220,61 @@ const Home = () => {
       <div className="container-fluid" id="detail">
         <div className="row locator-askmbtech">
           <div className="col-lg-12">
-            <div className="row">
-              {articles.map((item, key) => (
-                <div class="col-md-4">
-                  <div class="card p-3">
-                    <div class="d-flex flex-row mb-3">
-                      <img
-                        src={item.fields.heroImage.fields.file.url}
-                        width="300"
-                      ></img>
-                      <div class="d-flex flex-column ml-2">
-                        <span>{item.fields.title}</span>
+            
+          </div>
+        </div>
+      </div>
+      <div className="container-fluid" id="qrcode">
+        <div className="row padding-all2">
+          <div className="col-lg-12 pt-4 pb-4">
+            <section className="row" data-aos="fade-up">
+              <div className="col-lg-3 qr-code">
+                <h3 className="text-center">Mobile Application </h3>
+                <p
+                  className="text-justify pl-2r pr-2r pb-4r"
+                  style={{ color: "#000" }}
+                >
+                  Build Mobile Application with newest technology.
+                  <br></br>
+                </p>
+              </div>
+              <div className="col-lg-8">
+                <div className="col-lg-12 img-qrcode pl-5r">
+                  <div className="row">
+                  {articles.map((item, key) => (
+                      <div class="col-md-4">
+                        <div class="card p-3">
+                          <div class="d-flex flex-row mb-3">
+                            <img
+                              src={item.fields.heroImage.fields.file.url}
+                              width="300"
+                            ></img>
+                            <div class="d-flex flex-column ml-2">
+                              <span>{item.fields.title}</span>
+                            </div>
+                          </div>
+                          <h6>{item.fields.description}.</h6>
+                          <div class="d-flex justify-content-between install mt-3">
+                            <span>Installed 172 times</span>
+                            <span class="text-primary">
+                              View&nbsp;<i class="fa fa-angle-right"></i>
+                            </span>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                    <h6>{item.fields.description}.</h6>
-                    <div class="d-flex justify-content-between install mt-3">
-                      <span>Installed 172 times</span>
-                      <span class="text-primary">
-                        View&nbsp;<i class="fa fa-angle-right"></i>
-                      </span>
-                    </div>
+                    ))}
                   </div>
                 </div>
-              ))}
-            </div>
+              </div>
+            </section>
           </div>
+        </div>
+      </div>
+
+      {/* Services */}
+      <div className="container-fluid white-zonk">
+        <div className="row">
+          <div className="col-lg-12 p-0"></div>
         </div>
       </div>
 
@@ -269,7 +291,7 @@ const Home = () => {
             </div>
             <div className="col-lg-8 float-right pl-15-rm padding-lr-m30 pb-1r pb-3rem">
               <h2 className="title-detail-produk text-center">
-                DETAIL PRODUK MBTECH
+                Services
               </h2>
               <p className="text_main1 text-justify text-white">
                 MBtech - The Best & The Original Automotive Synthetic Leather
@@ -298,110 +320,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="container-fluid padding-fitur-ccs" id="">
-        <div className="row locator-askmbtech-last">
-          <div className="col-lg-12">
-            <div className="row">
-              <section className="col-lg-4 pb-3" data-aos="fade-up">
-                <div className="col-lg-12">
-                  <img
-                    className="img-fluid icon-fitur"
-                    src={images_cleaning}
-                    alt="images_iconlocator"
-                  ></img>
-                  <p
-                    className="m-0 pt-3"
-                    style={{
-                      fontSize: "20px ",
-                      fontWeight: "bold",
-                      color: "#8d7b4d",
-                    }}
-                  >
-                    CLEANING METHOD
-                  </p>
-                  <img
-                    className="img-fluid"
-                    src={images_cleanmethod}
-                    alt="images_iconlocator"
-                  ></img>
-                  <p
-                    className="pt-1 text-center"
-                    style={{ color: "#000", fontSize: "14px" }}
-                  >
-                    Memberikan panduan lengkap cara membersihkan dan perawatan
-                    produk MBtech.
-                  </p>
-                </div>
-              </section>
-              <section className="col-lg-4 pb-3" data-aos="fade-up">
-                <div className="col-lg-12">
-                  <img
-                    className="img-fluid icon-fitur"
-                    src={images_color}
-                    alt="images_iconconsultation"
-                  ></img>
-                  <p
-                    className="m-0 pt-3"
-                    style={{
-                      fontSize: "20px ",
-                      fontWeight: "bold",
-                      color: "#8d7b4d",
-                    }}
-                  >
-                    COLOUR COLLECTION
-                  </p>
-                  <img
-                    className="img-fluid "
-                    src={images_collection}
-                    alt="images_iconlocator"
-                  ></img>
-                  <p
-                    className="pt-1 text-center"
-                    style={{ color: "#000", fontSize: "14px" }}
-                  >
-                    Menampilkan koleksi warna varian produk MBtech. Anda juga
-                    bisa membuat kreasi warna personal dengan memadupadankan
-                    pilihan warna.
-                  </p>
-                </div>
-              </section>
-              <section className="col-lg-4 pb-3" data-aos="fade-up">
-                <div className="col-lg-12">
-                  <img
-                    className="img-fluid icon-fitur"
-                    src={images_smakerloc}
-                    alt="images_iconconsultation"
-                  ></img>
-                  <p
-                    className="m-0 pt-3"
-                    style={{
-                      fontSize: "20px ",
-                      fontWeight: "bold",
-                      color: "#8d7b4d",
-                    }}
-                  >
-                    SEATMAKER LOCATOR
-                  </p>
-                  <img
-                    className="img-fluid"
-                    src={images_smakerlocator}
-                    alt="images_iconlocator"
-                  ></img>
-                  <p
-                    className="pt-1 text-center"
-                    style={{ color: "#000", fontSize: "14px" }}
-                  >
-                    Memudahkan Anda mencari lokasi seatmaker yang dituju.
-                  </p>
-                </div>
-              </section>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* footer */}
-
       <section
         className="container-fluid footer-bg1 pt-5r padding-lr0"
         id="contact"

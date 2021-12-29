@@ -263,7 +263,6 @@ h2{font-size: 36; font-weight: bold; margin-bottom: 0px;}
 }
 .qr-code h3{
   font-size: 30px;
-  padding-top: 250px;
   color:#8b7844;
   font-weight: bold;
 }
@@ -272,10 +271,10 @@ h2{font-size: 36; font-weight: bold; margin-bottom: 0px;}
   /* padding-bottom: 30px; */
 }
 .locator-askmbtech{
-    padding: 50px 10% 50px 10%!important;
-    background-color: #ffffff;
-    background-image: linear-gradient( to right, #FFFFFC, #d1d1d1, #ffffff )
-}
+    padding: 30px 10% 30px 10%!important;
+    background-color: #000000;
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(41,41,45,1) 78%, rgba(138,143,144,1) 100%);
+  }
 .locator-askmbtech-last{
   padding: 50px 10% 50px 10%!important;
   /* background-color: #ffffff; */

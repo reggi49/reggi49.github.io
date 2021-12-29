@@ -28,7 +28,7 @@ html{
 }
 .banner-title{
   font-family: "Antenna", Arial, Helvetica, sans-serif;
-  font-size: 38px;
+  font-size: 60px;
   font-weight: bold;
 
   background: -webkit-linear-gradient(#eee, #8b7844);
@@ -36,6 +36,15 @@ html{
   -webkit-text-fill-color: transparent;
   padding-top: 1rem;
 
+}
+.banner-subtitle{
+  font-family: "Antenna", Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+
+  background: -webkit-linear-gradient(#eee, #8b7844);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .bg-detail-product{
   background-image: linear-gradient(#554431, #8e7c61);
@@ -137,7 +146,7 @@ h2{font-size: 36; font-weight: bold; margin-bottom: 0px;}
     /* padding: 0px 300px 0px 300px!important; */
     background-color: #64533c;
 }
-#fitur{
+#portfolio{
   background-color: #000000;
 }
 .padding-fitur{
@@ -166,9 +175,9 @@ h2{font-size: 36; font-weight: bold; margin-bottom: 0px;}
     padding-left: 26text_main1_10px;
 }
 .menu-header a{
-    color: #989898;
+    color: #fff;
     font-family: "Antenna", Times, serif;
-    font-size: 1.5vw;  
+    font-size: 1vw;  
     text-transform: uppercase;
     font-weight: bold;
 }

@@ -56,6 +56,7 @@ const Home = () => {
       })
       .catch(console.error);
   }
+
   useEffect(() => {
     fetchPost();
   },[]);
@@ -121,21 +122,15 @@ const Home = () => {
               ></img>
             </div>
             <div className="col-lg-8 text-justify pl-5r">
-              <h2 className="banner-title text-center pt-3r">
-                MBtech E-Catalog
-              </h2>
+              <h2 className="banner-title text-center pt-3r">Hi I'm Reggi</h2>
+              <h3 className="banner-subtitle text-center">
+                Software Enginer
+              </h3>
               <br></br>
               <div style={{ font: 18, color: "#ffffff" }}>
                 <p className="text_main1_1">
-                  MBtech E-Catalog hadir untuk memudahkan Anda menemukan
-                  inspirasi desain jok dan seatmaker. Aplikasi ini memiliki
-                  berbagai fitur untuk menjangkau lokasi seatmaker terdekat.
-                  Cukup aktifkan sinyal GPS atau dengan scan QR Code di
-                  smartphone Anda.
+                 Living in Jakarta, Indonesia. My Strenght in website application and mobile application. If you want to know about me, feel free to contact me. 
                   <br></br>
-                  <br></br>
-                  Aplikasi MBtech E-Catalog juga tersedia dalam versi smartphone
-                  (Android dan iOS). Ayo, segera download aplikasinya.
                 </p>
                 <br></br>
                 <div className="row">
@@ -234,35 +229,28 @@ const Home = () => {
         <div className="row locator-askmbtech">
           <div className="col-lg-12">
             <div className="row">
-              <section className="col-lg-12 pb-3" data-aos="fade-up">
-                <ul class="slides image-box hotel listing-style1 box-portfolio"></ul>
-                {articles.map((item, key) => (
-                  <li classs="box-portfolio">
-                    <article class="box">
-                      <figure>
-                        <a href="#" class="hover-effect popup-gallery">
-                          <img
-                            width="270"
-                            height="160"
-                            alt=""
-                            src="https://i.imgur.com/JN2wkb6.jpg"
-                            draggable="false"
-                          ></img>
-                        </a>
-                      </figure>
-                      <div class="details">
-                        <h4 class="box-title">{item.fields.title}</h4>
-                        <p class="description">{item.fields.description}</p>
-                        <div class="action">
-                          <a class="button btn-small" href="#">
-                            BOOK
-                          </a>
-                        </div>
+              {articles.map((item, key) => (
+                <div class="col-md-4">
+                  <div class="card p-3">
+                    <div class="d-flex flex-row mb-3">
+                      <img
+                        src={item.fields.heroImage.fields.file.url}
+                        width="300"
+                      ></img>
+                      <div class="d-flex flex-column ml-2">
+                        <span>{item.fields.title}</span>
                       </div>
-                    </article>
-                  </li>
-                ))}
-              </section>
+                    </div>
+                    <h6>{item.fields.description}.</h6>
+                    <div class="d-flex justify-content-between install mt-3">
+                      <span>Installed 172 times</span>
+                      <span class="text-primary">
+                        View&nbsp;<i class="fa fa-angle-right"></i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>

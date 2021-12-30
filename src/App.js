@@ -1,30 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import images_logo from "./assets/img/logo_mbtech.png";
 import images_android from "./assets/img/google_play.png";
 import images_ios from "./assets/img/app_store.png";
 import images_banner from "./assets/img/handphone_banner.png";
-import images_locator from "./assets/img/handphone-locator.png";
-import images_askmbtech from "./assets/img/handphone-askmbtech.png";
-import images_iconlocator from "./assets/img/location-icon.png";
-import images_iconconsultation from "./assets/img/icon-consultation.png";
 import images_detail from "./assets/img/detail_produk.png";
 import images_produk from "./assets/img/produk-icon.png";
-import images_smakerloc from "./assets/img/seatmkr-loc-icon-500.png";
-import images_cleaning from "./assets/img/cleaning-icon-500.png";
-import images_color from "./assets/img/colour-icon-500.png";
-import images_cleanmethod from "./assets/img/clean-method.png";
-import images_collection from "./assets/img/color-collection.png";
-import images_smakerlocator from "./assets/img/seatmaker-locator.png";
-import images_qrcode from "./assets/img/icon-scan-qr.png";
-import images_handqrcode from "./assets/img/hand-qrcode.png";
-import images_profilesmaker from "./assets/img/profile-seatmaker.png";
 import image_facebook from "./assets/img/facebook-icon.png";
 import image_instagram from "./assets/img/instagram-icon.png";
 import image_youtube from "./assets/img/youtube-icon.png";
 import image_twitter from "./assets/img/twitter-icon.png";
-import image_whatsapp from "./assets/img/whatsapp-icon.png";
-import image_hotline from "./assets/img/hotline-icon.png";
-import image_email from "./assets/img/email-icon.png";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./assets/css/App.css";
@@ -32,33 +15,51 @@ import "./assets/css/Style_default.css";
 // import { findDOMNode } from ' react-dom';
 import Aos from "aos";
 import "aos/dist/aos.css";
-
 import { createClient } from "contentful";
-import axios from 'axios';
 
 const Home = () => {
   Aos.init({ duration: 1000 });
-  const [articles, setArticles] = useState([]);
+  const [websites, setWebsites] = useState([]);
+  const [mobiles, setMobiles] = useState([]);
 
   const client = createClient({
     space: "38v5evtkgftl",
     accessToken: "kDgiFMQFZAObsWasOixfK8UYG5Ij7E8wmj-UE88zl8Y",
   });
 
-  const fetchPost = () => {
+  const fetchWebsite = () => {
     client
       .getEntries({
         content_type: "blogPost",
+        'fields.tags':  "website" ,
+        limit: 6,
+        //skip: 2
       })
       .then(({ items }) => {
-        setArticles(items);
+        setWebsites(items);
+        console.log(items);
+      })
+      .catch(console.error);
+  }
+
+  const fetchMobile = () => {
+    client
+      .getEntries({
+        content_type: "blogPost",
+        'fields.tags':  "mobile" ,
+        limit: 6,
+        //skip: 2
+      })
+      .then(({ items }) => {
+        setMobiles(items);
         console.log(items);
       })
       .catch(console.error);
   }
 
   useEffect(() => {
-    fetchPost();
+    fetchWebsite();
+    fetchMobile();
   },[]);
 
   return (
@@ -123,13 +124,13 @@ const Home = () => {
             </div>
             <div className="col-lg-8 text-justify pl-5r">
               <h2 className="banner-title text-center pt-3r">Hi I'm Reggi</h2>
-              <h3 className="banner-subtitle text-center">
-                Software Enginer
-              </h3>
+              <h3 className="banner-subtitle text-center">Software Engineer</h3>
               <br></br>
               <div style={{ font: 18, color: "#ffffff" }}>
                 <p className="text_main1_1">
-                 Living in Jakarta, Indonesia. My Strenght in website application and mobile application. If you want to know about me, feel free to contact me. 
+                  Living in Jakarta, Indonesia. My Strenght in website
+                  application and mobile application. If you want to know about
+                  me, feel free to contact me.
                   <br></br>
                 </p>
                 <br></br>
@@ -186,25 +187,24 @@ const Home = () => {
               <div className="col-lg-8">
                 <div className="col-lg-12 img-qrcode pl-5r">
                   <div className="row">
-                  {articles.map((item, key) => (
-                      <div class="col-md-4">
-                        <div class="card p-3">
-                          <div class="d-flex flex-row mb-3">
+                    {websites.map((item, key) => (
+                      <div key={key} className="col-md-4">
+                        <div className="panel" style={{ border: "none" }}>
+                          <div className="d-flex flex-row mb-3">
                             <img
+                              className="image_portfolio"
                               src={item.fields.heroImage.fields.file.url}
-                              width="300"
+                              alt={item.fields.title}
                             ></img>
-                            <div class="d-flex flex-column ml-2">
-                              <span>{item.fields.title}</span>
+                            <div className="d-flex flex-column ml-2">
+                              <p className="text_portfolio">
+                                {item.fields.title}
+                              </p>
                             </div>
                           </div>
-                          <h6>{item.fields.description}.</h6>
-                          <div class="d-flex justify-content-between install mt-3">
-                            <span>Installed 172 times</span>
-                            <span class="text-primary">
-                              View&nbsp;<i class="fa fa-angle-right"></i>
-                            </span>
-                          </div>
+                          <h5 className="text_desc_portfolio">
+                            {item.fields.description}
+                          </h5>{" "}
                         </div>
                       </div>
                     ))}
@@ -219,9 +219,7 @@ const Home = () => {
       {/* main 3 */}
       <div className="container-fluid" id="detail">
         <div className="row locator-askmbtech">
-          <div className="col-lg-12">
-            
-          </div>
+          <div className="col-lg-12"></div>
         </div>
       </div>
       <div className="container-fluid" id="qrcode">
@@ -241,25 +239,24 @@ const Home = () => {
               <div className="col-lg-8">
                 <div className="col-lg-12 img-qrcode pl-5r">
                   <div className="row">
-                  {articles.map((item, key) => (
-                      <div class="col-md-4">
-                        <div class="card p-3">
-                          <div class="d-flex flex-row mb-3">
+                    {mobiles.map((item, key) => (
+                      <div key={key} className="col-md-4">
+                        <div className="panel" style={{ border: "none" }}>
+                          <div className="d-flex flex-row mb-3">
                             <img
+                              className="image_portfolio"
                               src={item.fields.heroImage.fields.file.url}
-                              width="300"
+                              alt={item.fields.title}
                             ></img>
-                            <div class="d-flex flex-column ml-2">
-                              <span>{item.fields.title}</span>
+                            <div className="d-flex flex-column ml-2">
+                              <p className="text_portfolio">
+                                {item.fields.title}
+                              </p>
                             </div>
                           </div>
-                          <h6>{item.fields.description}.</h6>
-                          <div class="d-flex justify-content-between install mt-3">
-                            <span>Installed 172 times</span>
-                            <span class="text-primary">
-                              View&nbsp;<i class="fa fa-angle-right"></i>
-                            </span>
-                          </div>
+                          <h5 className="text_desc_portfolio">
+                            {item.fields.description}
+                          </h5>{" "}
                         </div>
                       </div>
                     ))}
@@ -290,9 +287,7 @@ const Home = () => {
               ></img>
             </div>
             <div className="col-lg-8 float-right pl-15-rm padding-lr-m30 pb-1r pb-3rem">
-              <h2 className="title-detail-produk text-center">
-                Services
-              </h2>
+              <h2 className="title-detail-produk text-center">Services</h2>
               <p className="text_main1 text-justify text-white">
                 MBtech - The Best & The Original Automotive Synthetic Leather
                 dirancang dan diproduksi khusus menggunakan teknologi terkini
@@ -336,6 +331,7 @@ const Home = () => {
                     width="42"
                     height="42"
                     className="d-flex pt-2 pb-2"
+                    alt="facebook"
                   ></img>
                   <span
                     className="float-left pt-2 pl-1r "
@@ -353,6 +349,7 @@ const Home = () => {
                     width="42"
                     height="42"
                     className="d-flex pt-2 pb-2"
+                    alt="instagram"
                   ></img>
                   <span
                     className="float-left pt-2 pl-1r "
@@ -370,6 +367,7 @@ const Home = () => {
                     width="42"
                     height="42"
                     className="d-flex pt-2 pb-2"
+                    alt="youtube"
                   ></img>
                   <span
                     className="float-left pt-2 pl-1r "
@@ -387,6 +385,7 @@ const Home = () => {
                     width="42"
                     height="42"
                     className="d-flex pt-2 pb-2"
+                    alt="twitter"
                   ></img>
                   <span
                     className="float-left pt-2 pl-1r "

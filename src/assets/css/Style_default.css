@@ -206,6 +206,40 @@ h2{font-size: 36; font-weight: bold; margin-bottom: 0px;}
   font-weight: normal;
   font-size: 20px;
 }
+.text_portfolio{
+  font-weight: normal;
+  color: #8b7844;
+  font-size: 20px;
+  padding: 10px 5px;
+  display: block; /* Fallback for non-webkit */
+  display: -webkit-box;
+  height: 2em; /* Fallback for non-webkit, line-height * 2 */
+  line-height: 1.3em;
+  -webkit-line-clamp: 2; /* if you change this, make sure to change the fallback line-height and height */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.text_desc_portfolio{
+  font-weight: normal;
+  text-align: justify;
+  text-justify: inter-word;
+  color: rgb(0, 0, 0);
+  padding: 0 5px 10px 5px;
+  display: block; /* Fallback for non-webkit */
+  display: -webkit-box;
+  height: 4.5em; /* Fallback for non-webkit, line-height * 2 */
+  line-height: 1.3em;
+  -webkit-line-clamp: 2; /* if you change this, make sure to change the fallback line-height and height */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.image_portfolio{
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 900 / 600;
+}
 .text-white{
   color: #ffffff;
 }
@@ -260,6 +294,8 @@ h2{font-size: 36; font-weight: bold; margin-bottom: 0px;}
   margin: 0 0 30px 100px;
   padding-top: 20px;
   background-color: #ffffff;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
 }
 .qr-code h3{
   font-size: 30px;
@@ -268,7 +304,7 @@ h2{font-size: 36; font-weight: bold; margin-bottom: 0px;}
 }
 .img-qrcode {
   margin-top: 30px;
-  /* padding-bottom: 30px; */
+  margin-bottom: 30px;
 }
 .locator-askmbtech{
     padding: 30px 10% 30px 10%!important;

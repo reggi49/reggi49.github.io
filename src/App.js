@@ -9,13 +9,16 @@ import image_instagram from "./assets/img/instagram-icon.png";
 import image_youtube from "./assets/img/youtube-icon.png";
 import image_twitter from "./assets/img/twitter-icon.png";
 
+import Slider from 'react-slick';
+import Aos from "aos";
+import { createClient } from "contentful";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./assets/css/App.css";
 import "./assets/css/Style_default.css";
-// import { findDOMNode } from ' react-dom';
-import Aos from "aos";
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import "aos/dist/aos.css";
-import { createClient } from "contentful";
 
 const Home = () => {
   Aos.init({ duration: 1000 });
@@ -27,12 +30,20 @@ const Home = () => {
     accessToken: "kDgiFMQFZAObsWasOixfK8UYG5Ij7E8wmj-UE88zl8Y",
   });
 
+  const settings = {
+    dots: true,
+    infinite: true,
+    pauseOnHover: true,
+    slidesToShow: 3,
+    rows: 2,
+  };
+
   const fetchWebsite = () => {
     client
       .getEntries({
         content_type: "blogPost",
         'fields.tags':  "website" ,
-        limit: 6,
+        //limit: 6,
         //skip: 2
       })
       .then(({ items }) => {
@@ -47,7 +58,7 @@ const Home = () => {
       .getEntries({
         content_type: "blogPost",
         'fields.tags':  "mobile" ,
-        limit: 6,
+        //limit: 6,
         //skip: 2
       })
       .then(({ items }) => {
@@ -180,13 +191,14 @@ const Home = () => {
                   className="text-justify pl-2r pr-2r pb-4r"
                   style={{ color: "#000" }}
                 >
-                  Build website with newest technology.
+                  Builts website with newest technology.
                   <br></br>
                 </p>
               </div>
               <div className="col-lg-8">
                 <div className="col-lg-12 img-qrcode pl-5r">
                   <div className="row">
+                  <Slider {...settings}>
                     {websites.map((item, key) => (
                       <div key={key} className="col-md-4">
                         <div className="panel" style={{ border: "none" }}>
@@ -208,6 +220,7 @@ const Home = () => {
                         </div>
                       </div>
                     ))}
+                  </Slider>
                   </div>
                 </div>
               </div>
@@ -232,18 +245,20 @@ const Home = () => {
                   className="text-justify pl-2r pr-2r pb-4r"
                   style={{ color: "#000" }}
                 >
-                  Build Mobile Application with newest technology.
+                  Builts Mobile Application with newest technology.
                   <br></br>
                 </p>
               </div>
               <div className="col-lg-8">
                 <div className="col-lg-12 img-qrcode pl-5r">
                   <div className="row">
+                  <Slider {...settings}>
                     {mobiles.map((item, key) => (
                       <div key={key} className="col-md-4">
                         <div className="panel" style={{ border: "none" }}>
                           <div className="d-flex flex-row mb-3">
                             <img
+                              href=""
                               className="image_portfolio"
                               src={item.fields.heroImage.fields.file.url}
                               alt={item.fields.title}
@@ -260,6 +275,7 @@ const Home = () => {
                         </div>
                       </div>
                     ))}
+                  </Slider>
                   </div>
                 </div>
               </div>

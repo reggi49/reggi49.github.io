@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import images_android from "./assets/img/google_play.png";
 import images_ios from "./assets/img/app_store.png";
-import images_banner from "./assets/img/handphone_banner.png";
-import images_detail from "./assets/img/detail_produk.png";
+import images_banner from "./assets/img/char-full.png";
+import char_services from "./assets/img/char-services.png";
 import images_produk from "./assets/img/produk-icon.png";
 import image_facebook from "./assets/img/facebook-icon.png";
 import image_instagram from "./assets/img/instagram-icon.png";
 import image_youtube from "./assets/img/youtube-icon.png";
-import image_twitter from "./assets/img/twitter-icon.png";
+import image_github from "./assets/img/github-icon.png";
 
 import Slider from 'react-slick';
 import Aos from "aos";
@@ -128,6 +128,7 @@ const Home = () => {
           <div className="col-lg-12 banner">
             <div className="col-lg-3 col-xs-12 img-hp1">
               <img
+                style={{ width: "65%" }}
                 className="img-fluid"
                 src={images_banner}
                 alt="Image Banner E-Catalog"
@@ -198,29 +199,29 @@ const Home = () => {
               <div className="col-lg-8">
                 <div className="col-lg-12 img-qrcode pl-5r">
                   <div className="row">
-                  <Slider {...settings}>
-                    {websites.map((item, key) => (
-                      <div key={key} className="col-md-4">
-                        <div className="panel" style={{ border: "none" }}>
-                          <div className="d-flex flex-row mb-3">
-                            <img
-                              className="image_portfolio"
-                              src={item.fields.heroImage.fields.file.url}
-                              alt={item.fields.title}
-                            ></img>
-                            <div className="d-flex flex-column ml-2">
-                              <p className="text_portfolio">
-                                {item.fields.title}
-                              </p>
+                    <Slider {...settings}>
+                      {websites.map((item, key) => (
+                        <div key={key} className="col-md-4">
+                          <div className="panel" style={{ border: "none" }}>
+                            <div className="d-flex flex-row mb-3">
+                              <img
+                                className="image_portfolio"
+                                src={item.fields.heroImage.fields.file.url}
+                                alt={item.fields.title}
+                              ></img>
+                              <div className="d-flex flex-column ml-2">
+                                <p className="text_portfolio">
+                                  {item.fields.title}
+                                </p>
+                              </div>
                             </div>
+                            <h5 className="text_desc_portfolio">
+                              {item.fields.description}
+                            </h5>{" "}
                           </div>
-                          <h5 className="text_desc_portfolio">
-                            {item.fields.description}
-                          </h5>{" "}
                         </div>
-                      </div>
-                    ))}
-                  </Slider>
+                      ))}
+                    </Slider>
                   </div>
                 </div>
               </div>
@@ -252,30 +253,30 @@ const Home = () => {
               <div className="col-lg-8">
                 <div className="col-lg-12 img-qrcode pl-5r">
                   <div className="row">
-                  <Slider {...settings}>
-                    {mobiles.map((item, key) => (
-                      <div key={key} className="col-md-4">
-                        <div className="panel" style={{ border: "none" }}>
-                          <div className="d-flex flex-row mb-3">
-                            <img
-                              href=""
-                              className="image_portfolio"
-                              src={item.fields.heroImage.fields.file.url}
-                              alt={item.fields.title}
-                            ></img>
-                            <div className="d-flex flex-column ml-2">
-                              <p className="text_portfolio">
-                                {item.fields.title}
-                              </p>
+                    <Slider {...settings}>
+                      {mobiles.map((item, key) => (
+                        <div key={key} className="col-md-4">
+                          <div className="panel" style={{ border: "none" }}>
+                            <div className="d-flex flex-row mb-3">
+                              <img
+                                href=""
+                                className="image_portfolio"
+                                src={item.fields.heroImage.fields.file.url}
+                                alt={item.fields.title}
+                              ></img>
+                              <div className="d-flex flex-column ml-2">
+                                <p className="text_portfolio">
+                                  {item.fields.title}
+                                </p>
+                              </div>
                             </div>
+                            <h5 className="text_desc_portfolio">
+                              {item.fields.description}
+                            </h5>{" "}
                           </div>
-                          <h5 className="text_desc_portfolio">
-                            {item.fields.description}
-                          </h5>{" "}
                         </div>
-                      </div>
-                    ))}
-                  </Slider>
+                      ))}
+                    </Slider>
                   </div>
                 </div>
               </div>
@@ -296,13 +297,14 @@ const Home = () => {
           <div className="row">
             <div className="col-lg-4">
               <img
-                className="img-fluid w-100 img-detail"
-                src={images_detail}
+                style={{ width: "80%" }}
+                className="img-fluid w-60 pb-3rem"
+                src={char_services}
                 alt="Image Banner E-Catalog"
                 id="services"
               ></img>
             </div>
-            <div className="col-lg-8 float-right pl-15-rm padding-lr-m30 pb-1r pb-3rem">
+            <div className="col-lg-8 float-right padding-lr-m30 pb-1r pb-3rem">
               <h2 className="title-detail-produk text-center">Services</h2>
               <p className="text_main1 text-justify text-white">
                 MBtech - The Best & The Original Automotive Synthetic Leather
@@ -341,7 +343,7 @@ const Home = () => {
           <div className="row">
             <div className="col-lg-12">
               <div className="col-lg-3 footer-icon link_hoverfooter">
-                <a href="/">
+                <a href="https://www.facebook.com/reggi49/">
                   <img
                     src={image_facebook}
                     width="42"
@@ -359,7 +361,7 @@ const Home = () => {
                 </a>
               </div>
               <div className="col-lg-3 footer-icon link_hoverfooter">
-                <a href="/">
+                <a href="https://www.instagram.com/reggimuhamad">
                   <img
                     src={image_instagram}
                     width="42"
@@ -377,7 +379,7 @@ const Home = () => {
                 </a>
               </div>
               <div className="col-lg-3 footer-icon link_hoverfooter">
-                <a href="/">
+                <a href="youtube.com/user/reggi49">
                   <img
                     src={image_youtube}
                     width="42"
@@ -395,9 +397,9 @@ const Home = () => {
                 </a>
               </div>
               <div className="col-lg-3 footer-icon link_hoverfooter">
-                <a href="/">
+                <a href="https://github.com/reggi49">
                   <img
-                    src={image_twitter}
+                    src={image_github}
                     width="42"
                     height="42"
                     className="d-flex pt-2 pb-2"
@@ -408,7 +410,7 @@ const Home = () => {
                     style={{ fontSize: "18px", color: "#939393" }}
                   >
                     {" "}
-                    Twitter
+                    Github
                   </span>
                 </a>
               </div>
@@ -421,6 +423,11 @@ const Home = () => {
             <div className="row">
               <div className="col-lg-12">
                 <h5 className="jargon-footer1">Muhamad Reggi © 2022</h5>
+                <h5 style={{ fontSize: "10px" }}>
+                  <a href="http://www.freepik.com">
+                    Cartoon Art Designed by pikisuperstar / Freepik
+                  </a>
+                </h5>
               </div>
             </div>
           </div>

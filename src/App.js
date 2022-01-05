@@ -96,17 +96,17 @@ const Home = () => {
       .getEntry(id)
       .then((portfolio) =>  {
         setPortfolio(portfolio);
-        setModal(true);
-        console.log(portfolio);
+        //console.log(portfolio);
       })
       .catch(console.error);
+    setModal(true);
   }
 
-  function Modal() {
-    console.log('modal dipanggil');
+  const Modal = () => {
+    const showHideClassName = modal ? 'modal display-block' : 'modal display-none';
     return (
-      <div className="modal">
-        <div className="modal-content" onClick={e=> e.stopPropagation()}>
+      <div className={showHideClassName} onClick={() => setModal(false)}>
+        <div className="modal-main" onClick={e=> e.stopPropagation()}>
           <div className="modal-header">
             <button
               type="button"
@@ -117,7 +117,7 @@ const Home = () => {
             >
               <span aria-hidden="true">×</span>
             </button>
-            <h2 className="title_portfolio">{'portfolio.fields.title'}</h2>
+            <h2 className="title_portfolio">{portfolio == '' ? '' : portfolio.fields.title }</h2>
           </div>
 
           <div className="modal-body">
@@ -125,17 +125,18 @@ const Home = () => {
               <div className="d-flex flex-row mb-3 pb-3r">
                 <img
                   className="image_portfolio"
-                  src={'portfolio.fields.heroImage.fields.file.url'}
-                  alt={'portfolio.fields.title'}
+                  src={portfolio == '' ? '' : portfolio.fields.heroImage.fields.file.url}
+                  alt={portfolio == '' ? '' : portfolio.fields.title }
                 ></img>
               </div>
-              <p className="text_body_portfolio">{'portfolio.fields.body'}</p>
+              <p className="text_body_portfolio">{portfolio == '' ? '' : portfolio.fields.body}</p>
             </div>
           </div>
         </div>
       </div>
     );
   }
+
 
   useEffect(() => {
     fetchWebsite();
@@ -146,6 +147,7 @@ const Home = () => {
     <div className="App">
       <div className="container-fluid" id="home">
         {/* main-1 */}
+        <Modal onClose={() => setModal(false)} show={modal} />
         <div className="row padding-main">
           {/* menu dan logo */}
           <nav
@@ -255,12 +257,8 @@ const Home = () => {
                 </p>
               </div>
               <div className="col-lg-8">
-                <div className="col-lg-12 img-qrcode pl-5r">
-                  {/* Modal Portfolio */}
-                  {modal && (
-                    <Modal onClose={() => setModal(false)} show={modal} />
-                  )}
-                  <div className="row">
+                <div className="col-lg-12 img-qrcode pl-5r">                  
+                  <div className="row">                  
                     <Slider {...settings}>
                       {websites.map((item, key) => (
                         <div key={key} className="col-md-4">
@@ -322,7 +320,7 @@ const Home = () => {
                         <div key={key} className="col-md-4">
                           <div className="panel" style={{ border: "none" }}>
                             <div className="d-flex flex-row mb-3">
-                              <a onClick={() => getPortfolio(item.sys.id)}>
+                            <a onClick={() => getPortfolio(item.sys.id)}>
                                 <img
                                   className="image_portfolio"
                                   src={item.fields.heroImage.fields.file.url}

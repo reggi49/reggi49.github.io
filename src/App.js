@@ -35,6 +35,28 @@ const Home = () => {
     pauseOnHover: true,
     slidesToShow: 3,
     rows: 2,
+    responsive: [
+      {
+        breakpoint: 600,
+        settings: {
+          infinite: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1,
+          rows: 1,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          infinite: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1,
+          rows: 1,
+        },
+      },
+    ],
   };
 
   const fetchWebsite = () => {
@@ -47,7 +69,7 @@ const Home = () => {
       })
       .then(({ items }) => {
         setWebsites(items);
-        console.log(items);
+        // console.log(items);
       })
       .catch(console.error);
   }
@@ -62,7 +84,7 @@ const Home = () => {
       })
       .then(({ items }) => {
         setMobiles(items);
-        console.log(items);
+        // console.log(items);
       })
       .catch(console.error);
   }
@@ -127,8 +149,7 @@ const Home = () => {
           <div className="col-lg-12 banner">
             <div className="col-lg-3 col-xs-12 img-hp1">
               <img
-                style={{ width: "65%" }}
-                className="img-fluid"
+                className="img-fluid img-char"
                 src={images_banner}
                 alt="Image Banner E-Catalog"
               ></img>
@@ -149,7 +170,7 @@ const Home = () => {
                   <div className="col-lg-12 col-xs-12 p-0 text-center">
                     <a href="mailto:reggimuhamad@yahhoo.com">
                       <img
-                        className="img-fluid pr-3"
+                        className="img-fluid pb-3r"
                         src={images_hireme}
                         alt="hire me reggi"
                       ></img>
@@ -179,7 +200,7 @@ const Home = () => {
               <div className="col-lg-3 qr-code">
                 <h3 className="text-center">Website Application </h3>
                 <p
-                  className="text-justify pl-2r pr-2r pb-4r"
+                  className="text-justify text-center pl-2r pr-2r pb-4r"
                   style={{ color: "#000" }}
                 >
                   Builts website with newest technology.
@@ -287,7 +308,7 @@ const Home = () => {
           <div className="row">
             <div className="col-lg-4">
               <img
-                style={{ width: "80%", paddingTop: "25%" }}
+                style={{ width: "80%" }}
                 className="img-fluid w-60 pb-3rem"
                 src={char_services}
                 alt="Image Banner E-Catalog"

@@ -28,7 +28,7 @@ html{
 }
 .banner-title{
   font-family: "Antenna", Arial, Helvetica, sans-serif;
-  font-size: 5vw;
+  font-size : clamp(2rem, 16vw, 5rem);
   font-weight: bold;
 
   background: -webkit-linear-gradient(#eee, #8b7844);
@@ -39,7 +39,7 @@ html{
 }
 .banner-subtitle{
   font-family: "Antenna", Arial, Helvetica, sans-serif;
-  font-size: 2vw;
+  font-size : clamp(2rem, 8vw, 2.5rem);
   font-weight: bold;
 
   background: -webkit-linear-gradient(#eee, #8b7844);
@@ -56,7 +56,7 @@ html{
 }
 .title-detail-produk{
   font-family: "Antenna", Arial, Helvetica, sans-serif;
-  font-size: 4vw;
+  font-size : clamp(2rem, 15vw, 5rem);
   font-weight: bold;
 
   background: -webkit-linear-gradient(#eee, #8b7844);
@@ -195,16 +195,27 @@ h2{font-size: 36; font-weight: bold; margin-bottom: 0px;}
 .img-detail{
   margin:-21% 0;
 }
+.img-char{
+  width: 65%;
+}
 .pb-3rem{
   padding-bottom: 3rem !important;
 }
 .text_main1{
   font-weight: normal;
-  font-size: 1.5vw;
+  font-size : clamp(1rem, 4vw, 2rem);
+  text-align: justify;
+  text-justify: distribute;
+  text-align-last: left;  
 }
 .text_main1_1{
+  text-align: justify;
+  text-justify: distribute;
+  text-align-last: left;  
+  /* text-justify: inter-word; */
+  /* text-align-last: center; */
   font-weight: normal;
-  font-size: 1.5vw;
+  font-size : clamp(1rem, 4vw, 2rem);
 }
 .text_portfolio{
   font-weight: normal;
@@ -276,7 +287,7 @@ h2{font-size: 36; font-weight: bold; margin-bottom: 0px;}
 } */
 .title-fitur{
   font-family: "Antenna", Arial, Helvetica, sans-serif;
-  font-size: 44px;
+  font-size : clamp(1rem, 10vw, 5rem);
   font-weight: bold;
 
   background: -webkit-linear-gradient(#eee, #8b7844);
@@ -319,7 +330,7 @@ h2{font-size: 36; font-weight: bold; margin-bottom: 0px;}
   margin-top: 1rem;
 }
 .qr-code p{
-  font-size: 20px;
+  font-size: 16px;
   
 }
 .icon-fitur{
@@ -392,7 +403,9 @@ h2{font-size: 36; font-weight: bold; margin-bottom: 0px;}
   */
   
   @media (min-width: 1025px) and (max-width: 1280px) {
-    
+    .img-char{
+      width: 55%;
+    }
     /* CSS */
     .padding-all{
         padding: 10px 40px 0px 40px!important;
@@ -436,7 +449,9 @@ h2{font-size: 36; font-weight: bold; margin-bottom: 0px;}
   */
   
   @media (min-width: 768px) and (max-width: 1024px) {
-    
+    .img-char{
+      width: 45%;
+    }
     /* CSS */
     .padding-all{
         padding: 10px 40px 0px 40px!important;
@@ -483,7 +498,10 @@ h2{font-size: 36; font-weight: bold; margin-bottom: 0px;}
   */
   
   @media (min-width: 481px) and (max-width: 767px) {
-    
+    .img-char{
+      width: 15%;
+      padding-bottom: 20px;
+    }
     /* CSS */
     .padding-all{
         padding: 10px 40px 0px 40px!important;
@@ -528,6 +546,10 @@ h2{font-size: 36; font-weight: bold; margin-bottom: 0px;}
   */
   
   @media (min-width: 320px) and (max-width: 480px) {
+    .img-char{
+      width: 15%;
+      padding-bottom: 20px;
+    }
     .jargon-footer1{
       font-size: 17px;
       letter-spacing: 0;
@@ -563,7 +585,7 @@ h2{font-size: 36; font-weight: bold; margin-bottom: 0px;}
     }
     .title-detail-produk {
       font-family: "Antenna", Arial, Helvetica, sans-serif;
-      font-size: 4vw;
+      font-size : clamp(2rem, 16vw, 5rem);
       font-weight: bold;
       background: -webkit-linear-gradient(#eee, #8b7844);
           background-clip: border-box;
@@ -577,7 +599,10 @@ h2{font-size: 36; font-weight: bold; margin-bottom: 0px;}
     }
     .text_main1 {
       font-weight: normal;
-      font-size: 1vw;
+      font-size : clamp(1rem, 4vw, 2rem);
+      text-align: justify;
+      text-justify: distribute;
+      text-align-last: left;  
     }
     .pl-15-rm{padding-left: 0rem;}
     .qr-code{
@@ -592,7 +617,7 @@ h2{font-size: 36; font-weight: bold; margin-bottom: 0px;}
       padding-top: 20px;
     }
     .title-fitur{
-      font-size: 41px;
+      font-size : clamp(1rem, 10vw, 5rem);
       padding-left:1.5rem;
     }
     .pl-5r{
@@ -668,6 +693,10 @@ h2{font-size: 36; font-weight: bold; margin-bottom: 0px;}
     }
   }
   @media (max-width:320px){
+      .img-char{
+        width: 15%;
+        padding-bottom: 20px;
+      }
       .padding-all{
         padding: 30px 30px 0px 30px !important;
         background-color: #1E1D1D;

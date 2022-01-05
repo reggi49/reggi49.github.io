@@ -261,9 +261,7 @@ const Home = () => {
                               </div>
                             </div>
                             <h5 className="text_desc_portfolio">
-                              <p>
-                                {item.fields.description}
-                              </p>
+                              <p>{item.fields.description}</p>
                             </h5>{" "}
                           </div>
                         </div>
@@ -301,14 +299,12 @@ const Home = () => {
                 Services
               </h2>
               <p className="text_main1 text-justify text-white pb-3r">
-                Jason has been teaching developers of all skill levels how to
-                code for over a decade. He specializes in live coding,
-                simplifying complex topics into relatable analogies and demos,
-                and shoehorning corgi references into every project. For over a
-                decade I had many opportunities to work in a vast spectrum of
-                web technologies what let me gather a significant amount of
-                various experience. Working for companies and individuals around
-                the globe I met and learnt from amazing and ambitious people.
+                I has skill levels how to code for over a years. Simplifying
+                complex topics into relatable analogies and demos. For over a
+                years I had many opportunities to work in a vast spectrum of web
+                technologies what let me gather a significant amount of various
+                experience. Working for companies and individuals around the
+                globe I met and learnt from amazing and creative people.
                 <br></br>
               </p>
               <a href="/">

@@ -270,7 +270,7 @@ const Home = () => {
                           <div className="panel" style={{ border: "none" }}>
                             <div className="d-flex flex-row mb-3">
                               <img
-                                href=""
+                                href="#"
                                 className="image_portfolio"
                                 src={item.fields.heroImage.fields.file.url}
                                 alt={item.fields.title}
@@ -320,7 +320,7 @@ const Home = () => {
                 Services
               </h2>
               <p className="text_main1 text-justify text-white pb-3r">
-                I has skill levels how to code for over a years. Simplifying
+                I have skill levels how to code for over a years. Simplifying
                 complex topics into relatable analogies and demos. For over a
                 years I had many opportunities to work in a vast spectrum of web
                 technologies what let me gather a significant amount of various
@@ -328,7 +328,7 @@ const Home = () => {
                 globe I met and learnt from amazing and creative people.
                 <br></br>
               </p>
-              <a href="/">
+              <a href="#">
                 <img
                   className="img-fluid width-100"
                   src={images_produk}
@@ -392,7 +392,7 @@ const Home = () => {
                 </a>
               </div>
               <div className="col-lg-3 footer-icon link_hoverfooter">
-                <a href="youtube.com/user/reggi49">
+                <a href="https://youtube.com/user/reggi49">
                   <img
                     src={image_youtube}
                     width="42"

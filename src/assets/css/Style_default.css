@@ -28,7 +28,7 @@ html{
 }
 .banner-title{
   font-family: "Antenna", Arial, Helvetica, sans-serif;
-  font-size: 60px;
+  font-size: 5vw;
   font-weight: bold;
 
   background: -webkit-linear-gradient(#eee, #8b7844);
@@ -39,7 +39,7 @@ html{
 }
 .banner-subtitle{
   font-family: "Antenna", Arial, Helvetica, sans-serif;
-  font-size: 20px;
+  font-size: 2vw;
   font-weight: bold;
 
   background: -webkit-linear-gradient(#eee, #8b7844);
@@ -56,7 +56,7 @@ html{
 }
 .title-detail-produk{
   font-family: "Antenna", Arial, Helvetica, sans-serif;
-  font-size: 38px;
+  font-size: 4vw;
   font-weight: bold;
 
   background: -webkit-linear-gradient(#eee, #8b7844);
@@ -172,7 +172,7 @@ h2{font-size: 36; font-weight: bold; margin-bottom: 0px;}
 }
 .menu-header{
     margin-top: 25px;
-    padding-left: 26text_main1_10px;
+    padding-left: 26px;
 }
 .menu-header a{
     color: #fff;
@@ -200,16 +200,16 @@ h2{font-size: 36; font-weight: bold; margin-bottom: 0px;}
 }
 .text_main1{
   font-weight: normal;
-  font-size: 22px;
+  font-size: 1.5vw;
 }
 .text_main1_1{
   font-weight: normal;
-  font-size: 20px;
+  font-size: 1.5vw;
 }
 .text_portfolio{
   font-weight: normal;
   color: #8b7844;
-  font-size: 20px;
+  font-size: 1.5vw;
   padding: 10px 5px;
   display: block; /* Fallback for non-webkit */
   display: -webkit-box;
@@ -332,8 +332,8 @@ h2{font-size: 36; font-weight: bold; margin-bottom: 0px;}
     background: linear-gradient(70deg, #77683d, #d1c8ab);
     color:#FFFFFF;
 }
-.text-rightAuto{
-  text-align: right;
+.text-center{
+  text-align: center;
 }
 .paddingMain2-fitur{
   padding-left: 182px !important;
@@ -406,7 +406,7 @@ h2{font-size: 36; font-weight: bold; margin-bottom: 0px;}
     .padding-all2{
       padding: 30px 30px 0px 30px !important;
     }
-    .text-rightAuto{
+    .text-center{
       text-align: center;
     }
     .paddingMain2-fitur{
@@ -449,7 +449,7 @@ h2{font-size: 36; font-weight: bold; margin-bottom: 0px;}
     .padding-all2{
       padding: 30px 30px 0px 30px !important;
     }
-    .text-rightAuto{
+    .text-center{
       text-align: center;
     }
     .paddingMain2-fitur{
@@ -499,7 +499,7 @@ h2{font-size: 36; font-weight: bold; margin-bottom: 0px;}
     .padding-all2{
       padding: 30px 30px 0px 30px !important;
     }
-    .text-rightAuto{
+    .text-center{
       text-align: center;
     }
     .paddingMain2-fitur{
@@ -563,7 +563,7 @@ h2{font-size: 36; font-weight: bold; margin-bottom: 0px;}
     }
     .title-detail-produk {
       font-family: "Antenna", Arial, Helvetica, sans-serif;
-      font-size: 21px;
+      font-size: 4vw;
       font-weight: bold;
       background: -webkit-linear-gradient(#eee, #8b7844);
           background-clip: border-box;
@@ -577,7 +577,7 @@ h2{font-size: 36; font-weight: bold; margin-bottom: 0px;}
     }
     .text_main1 {
       font-weight: normal;
-      font-size: 17px;
+      font-size: 1vw;
     }
     .pl-15-rm{padding-left: 0rem;}
     .qr-code{
@@ -642,7 +642,7 @@ h2{font-size: 36; font-weight: bold; margin-bottom: 0px;}
     .padding-all2{
       padding: 30px 30px 0px 30px !important;
     }
-    .text-rightAuto{
+    .text-center{
       text-align: center;
     }
     .paddingMain2-fitur{
@@ -675,7 +675,7 @@ h2{font-size: 36; font-weight: bold; margin-bottom: 0px;}
       .padding-all2{
         padding: 30px 30px 0px 30px !important;
       }
-      .text-rightAuto{
+      .text-center{
         text-align: center;
       }
       .paddingMain2-fitur{

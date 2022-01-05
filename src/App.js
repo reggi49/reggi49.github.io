@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import images_android from "./assets/img/google_play.png";
-import images_ios from "./assets/img/app_store.png";
+import images_hireme from "./assets/img/hireme.png";
 import images_banner from "./assets/img/char-full.png";
 import char_services from "./assets/img/char-services.png";
 import images_produk from "./assets/img/produk-icon.png";
@@ -147,21 +146,12 @@ const Home = () => {
                 </p>
                 <br></br>
                 <div className="row">
-                  <div className="col-lg-6 col-xs-6 p-0 text-right">
-                    <a href="/">
+                  <div className="col-lg-12 col-xs-12 p-0 text-center">
+                    <a href="mailto:reggimuhamad@yahhoo.com">
                       <img
-                        className="img-fluid pr-3 ico"
-                        src={images_android}
-                        alt="google play e-catalog"
-                      ></img>
-                    </a>
-                  </div>
-                  <div className="col-lg-6 col-xs-6 p-0 text-left">
-                    <a href="/">
-                      <img
-                        className="img-fluid pr-3 ico"
-                        src={images_ios}
-                        alt="app store e-catalog"
+                        className="img-fluid pr-3"
+                        src={images_hireme}
+                        alt="hire me reggi"
                       ></img>
                     </a>
                   </div>
@@ -271,7 +261,9 @@ const Home = () => {
                               </div>
                             </div>
                             <h5 className="text_desc_portfolio">
-                              {item.fields.description}
+                              <p>
+                                {item.fields.description}
+                              </p>
                             </h5>{" "}
                           </div>
                         </div>
@@ -297,7 +289,7 @@ const Home = () => {
           <div className="row">
             <div className="col-lg-4">
               <img
-                style={{ width: "80%" }}
+                style={{ width: "80%", paddingTop: "25%" }}
                 className="img-fluid w-60 pb-3rem"
                 src={char_services}
                 alt="Image Banner E-Catalog"
@@ -305,14 +297,18 @@ const Home = () => {
               ></img>
             </div>
             <div className="col-lg-8 float-right padding-lr-m30 pb-1r pb-3rem">
-              <h2 className="title-detail-produk text-center">Services</h2>
-              <p className="text_main1 text-justify text-white">
-                MBtech - The Best & The Original Automotive Synthetic Leather
-                dirancang dan diproduksi khusus menggunakan teknologi terkini
-                dengan kualitas standar internasional. MBtech berinovasi
-                menghadirkan berbagai varian produk unggulan yang dapat
-                digunakan untuk berbagai aplikasi seperti Automotive (mobil dan
-                motor), Home Interior dan berbagai aplikasi menarik lainnya.
+              <h2 className="title-detail-produk text-center pb-2r">
+                Services
+              </h2>
+              <p className="text_main1 text-justify text-white pb-3r">
+                Jason has been teaching developers of all skill levels how to
+                code for over a decade. He specializes in live coding,
+                simplifying complex topics into relatable analogies and demos,
+                and shoehorning corgi references into every project. For over a
+                decade I had many opportunities to work in a vast spectrum of
+                web technologies what let me gather a significant amount of
+                various experience. Working for companies and individuals around
+                the globe I met and learnt from amazing and ambitious people.
                 <br></br>
               </p>
               <a href="/">

@@ -23,6 +23,8 @@ const Home = () => {
   Aos.init({ duration: 1000 });
   const [websites, setWebsites] = useState([]);
   const [mobiles, setMobiles] = useState([]);
+  const [portfolio, setPortfolio] = useState([]);
+  const [modal, setModal] = useState(false);
 
   const client = createClient({
     space: "38v5evtkgftl",
@@ -89,6 +91,52 @@ const Home = () => {
       .catch(console.error);
   }
 
+  const getPortfolio = (id) => {
+    client
+      .getEntry(id)
+      .then((portfolio) =>  {
+        setPortfolio(portfolio);
+        setModal(true);
+        console.log(portfolio);
+      })
+      .catch(console.error);
+  }
+
+  function Modal() {
+    console.log('modal dipanggil');
+    return (
+      <div className="modal">
+        <div className="modal-content" onClick={e=> e.stopPropagation()}>
+          <div className="modal-header">
+            <button
+              type="button"
+              className="close"
+              data-dismiss="modal"
+              aria-label="Close"
+              onClick={() => setModal(false)}
+            >
+              <span aria-hidden="true">×</span>
+            </button>
+            <h2 className="title_portfolio">{'portfolio.fields.title'}</h2>
+          </div>
+
+          <div className="modal-body">
+            <div className="card">
+              <div className="d-flex flex-row mb-3 pb-3r">
+                <img
+                  className="image_portfolio"
+                  src={'portfolio.fields.heroImage.fields.file.url'}
+                  alt={'portfolio.fields.title'}
+                ></img>
+              </div>
+              <p className="text_body_portfolio">{'portfolio.fields.body'}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   useEffect(() => {
     fetchWebsite();
     fetchMobile();
@@ -98,7 +146,6 @@ const Home = () => {
     <div className="App">
       <div className="container-fluid" id="home">
         {/* main-1 */}
-
         <div className="row padding-main">
           {/* menu dan logo */}
           <nav
@@ -209,17 +256,23 @@ const Home = () => {
               </div>
               <div className="col-lg-8">
                 <div className="col-lg-12 img-qrcode pl-5r">
+                  {/* Modal Portfolio */}
+                  {modal && (
+                    <Modal onClose={() => setModal(false)} show={modal} />
+                  )}
                   <div className="row">
                     <Slider {...settings}>
                       {websites.map((item, key) => (
                         <div key={key} className="col-md-4">
                           <div className="panel" style={{ border: "none" }}>
                             <div className="d-flex flex-row mb-3">
-                              <img
-                                className="image_portfolio"
-                                src={item.fields.heroImage.fields.file.url}
-                                alt={item.fields.title}
-                              ></img>
+                              <a onClick={() => getPortfolio(item.sys.id)}>
+                                <img
+                                  className="image_portfolio"
+                                  src={item.fields.heroImage.fields.file.url}
+                                  alt={item.fields.title}
+                                ></img>
+                              </a>
                               <div className="d-flex flex-column ml-2">
                                 <p className="text_portfolio">
                                   {item.fields.title}
@@ -269,12 +322,13 @@ const Home = () => {
                         <div key={key} className="col-md-4">
                           <div className="panel" style={{ border: "none" }}>
                             <div className="d-flex flex-row mb-3">
-                              <img
-                                href="#"
-                                className="image_portfolio"
-                                src={item.fields.heroImage.fields.file.url}
-                                alt={item.fields.title}
-                              ></img>
+                              <a onClick={() => getPortfolio(item.sys.id)}>
+                                <img
+                                  className="image_portfolio"
+                                  src={item.fields.heroImage.fields.file.url}
+                                  alt={item.fields.title}
+                                ></img>
+                              </a>
                               <div className="d-flex flex-column ml-2">
                                 <p className="text_portfolio">
                                   {item.fields.title}

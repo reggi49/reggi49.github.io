@@ -3,6 +3,7 @@ import images_hireme from "./assets/img/hireme.png";
 import images_banner from "./assets/img/char-full.png";
 import char_services from "./assets/img/char-services.png";
 import images_produk from "./assets/img/produk-icon.png";
+import images_loading from "./assets/img/loading.gif";
 import image_facebook from "./assets/img/facebook-icon.png";
 import image_instagram from "./assets/img/instagram-icon.png";
 import image_youtube from "./assets/img/youtube-icon.png";
@@ -106,7 +107,7 @@ const Home = () => {
     const showHideClassName = modal ? 'modal display-block' : 'modal display-none';
     return (
       <div className={showHideClassName} onClick={() => setModal(false)}>
-        <div className="modal-main" onClick={e=> e.stopPropagation()}>
+        <div className="modal-main" onClick={(e) => e.stopPropagation()}>
           <div className="modal-header">
             <button
               type="button"
@@ -117,7 +118,9 @@ const Home = () => {
             >
               <span aria-hidden="true">×</span>
             </button>
-            <h2 className="title_portfolio">{portfolio == '' ? '' : portfolio.fields.title }</h2>
+            <h2 className="title_portfolio">
+              {portfolio == "" ? "Getting Title ..." : portfolio.fields.title}
+            </h2>
           </div>
 
           <div className="modal-body">
@@ -125,11 +128,19 @@ const Home = () => {
               <div className="d-flex flex-row mb-3 pb-3r">
                 <img
                   className="image_portfolio"
-                  src={portfolio == '' ? '' : portfolio.fields.heroImage.fields.file.url}
-                  alt={portfolio == '' ? '' : portfolio.fields.title }
+                  src={
+                    portfolio == ""
+                      ? images_loading
+                      : portfolio.fields.heroImage.fields.file.url
+                  }
+                  alt={portfolio == "" ? "" : portfolio.fields.title}
                 ></img>
               </div>
-              <p className="text_body_portfolio">{portfolio == '' ? '' : portfolio.fields.body}</p>
+              <p className="text_body_portfolio">
+                {portfolio == ""
+                  ? "Getting Description ..."
+                  : portfolio.fields.body}
+              </p>
             </div>
           </div>
         </div>

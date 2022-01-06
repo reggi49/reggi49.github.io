@@ -157,8 +157,9 @@ const Home = () => {
   return (
     <div className="App">
       <div className="container-fluid" id="home">
+        {/* Modal */}
+        {modal && <Modal onClose={() => setModal(false)} show={modal} />}
         {/* main-1 */}
-        <Modal onClose={() => setModal(false)} show={modal} />
         <div className="row padding-main">
           {/* menu dan logo */}
           <nav
@@ -216,7 +217,9 @@ const Home = () => {
             </div>
             <div className="col-lg-8 text-justify pl-5r">
               <h2 className="banner-title text-center pt-3r">Hi I'm Reggi</h2>
-              <h3 className="banner-subtitle text-center">Software Engineer</h3>
+              <h3 className="banner-subtitle text-center">
+                Software Engineer Consultant
+              </h3>
               <br></br>
               <div style={{ font: 18, color: "#ffffff" }}>
                 <p className="text_main1_1">
@@ -268,8 +271,8 @@ const Home = () => {
                 </p>
               </div>
               <div className="col-lg-8">
-                <div className="col-lg-12 img-qrcode pl-5r">                  
-                  <div className="row">                  
+                <div className="col-lg-12 img-qrcode pl-5r">
+                  <div className="row">
                     <Slider {...settings}>
                       {websites.map((item, key) => (
                         <div key={key} className="col-md-4">
@@ -331,7 +334,7 @@ const Home = () => {
                         <div key={key} className="col-md-4">
                           <div className="panel" style={{ border: "none" }}>
                             <div className="d-flex flex-row mb-3">
-                            <a onClick={() => getPortfolio(item.sys.id)}>
+                              <a onClick={() => getPortfolio(item.sys.id)}>
                                 <img
                                   className="image_portfolio"
                                   src={item.fields.heroImage.fields.file.url}
@@ -498,7 +501,7 @@ const Home = () => {
           <div className="container ">
             <div className="row">
               <div className="col-lg-12">
-                <h5 className="jargon-footer1">Muhamad Reggi © 2022</h5>
+                <h5 className="jargon-footer1">Reggi © 2022</h5>
                 <h5 style={{ fontSize: "10px" }}>
                   <a href="http://www.freepik.com">
                     Cartoon Art Designed by pikisuperstar / Freepik

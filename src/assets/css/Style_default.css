@@ -220,7 +220,7 @@ h2{font-size: 36; font-weight: bold; margin-bottom: 0px;}
 .text_portfolio{
   font-weight: normal;
   color: #8b7844;
-  font-size : clamp(1rem, 6vw, 3rem);
+  font-size : clamp(1rem, 4vw, 2rem);
   padding: 10px 5px;
   display: block; /* Fallback for non-webkit */
   display: -webkit-box;

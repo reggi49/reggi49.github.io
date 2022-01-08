@@ -296,9 +296,9 @@ const Home = () => {
                                 </p>
                               </div>
                             </div>
-                            <h5 className="text_desc_portfolio">
+                            <h6 className="text_desc_portfolio">
                               {item.fields.description}
-                            </h5>{" "}
+                            </h6>{" "}
                           </div>
                         </div>
                       ))}
@@ -352,9 +352,9 @@ const Home = () => {
                                 </p>
                               </div>
                             </div>
-                            <h5 className="text_desc_portfolio">
+                            <h6 className="text_desc_portfolio">
                               <p>{item.fields.description}</p>
-                            </h5>{" "}
+                            </h6>{" "}
                           </div>
                         </div>
                       ))}

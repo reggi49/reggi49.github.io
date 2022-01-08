@@ -188,11 +188,11 @@ const Home = () => {
                   className="nav navbar-nav navbar-right"
                   id="navbarNavDropdown"
                 >
-                  <li className="active">
+                  {/* <li className="active">
                     <a href="#">
                       About <span className="sr-only">(current)</span>
                     </a>
-                  </li>
+                  </li> */}
                   <li>
                     <a href="#portfolio">Portfolio</a>
                   </li>
@@ -201,6 +201,11 @@ const Home = () => {
                   </li>
                   <li>
                     <a href="#contact">Contact</a>
+                  </li>
+                  <li>
+                    <a href="https://reggi49.medium.com/" target="_blank">
+                      Blog
+                    </a>
                   </li>
                 </ul>
               </div>

@@ -198,6 +198,9 @@ h2{font-size: 36; font-weight: bold; margin-bottom: 0px;}
 .img-char{
   width: 65%;
 }
+.img-services{
+  width: 80%;
+}
 .pb-3rem{
   padding-bottom: 3rem !important;
 }
@@ -444,6 +447,9 @@ h2{font-size: 36; font-weight: bold; margin-bottom: 0px;}
     .img-char{
       width: 55%;
     }
+    .img-services{
+      width: 60%;
+    }
     /* CSS */
     .padding-all{
         padding: 10px 40px 0px 40px!important;
@@ -488,7 +494,10 @@ h2{font-size: 36; font-weight: bold; margin-bottom: 0px;}
   
   @media (min-width: 768px) and (max-width: 1024px) {
     .img-char{
-      width: 45%;
+      width: 15%;
+    }
+    .img-services{
+      width: 20%;
     }
     /* CSS */
     .padding-all{
@@ -540,6 +549,9 @@ h2{font-size: 36; font-weight: bold; margin-bottom: 0px;}
       width: 15%;
       padding-bottom: 20px;
     }
+     .img-services{
+      width: 45%;
+    }
     /* CSS */
     .padding-all{
         padding: 10px 40px 0px 40px!important;
@@ -587,6 +599,9 @@ h2{font-size: 36; font-weight: bold; margin-bottom: 0px;}
     .img-char{
       width: 15%;
       padding-bottom: 20px;
+    }
+    .img-services{
+      width: 45%;
     }
     .jargon-footer1{
       font-size: 17px;
@@ -734,6 +749,9 @@ h2{font-size: 36; font-weight: bold; margin-bottom: 0px;}
       .img-char{
         width: 15%;
         padding-bottom: 20px;
+      }
+      .img-services{
+        width: 45%;
       }
       .padding-all{
         padding: 30px 30px 0px 30px !important;

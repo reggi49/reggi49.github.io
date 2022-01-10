@@ -215,7 +215,7 @@ const Home = () => {
           <div className="col-lg-12 banner">
             <div className="col-lg-3 col-xs-12 img-hp1">
               <img
-                className="img-fluid img-char"
+                className="img-fluid img-char pb-2r"
                 src={images_banner}
                 alt="Image Banner E-Catalog"
               ></img>
@@ -379,8 +379,7 @@ const Home = () => {
           <div className="row">
             <div className="col-lg-4">
               <img
-                style={{ width: "80%" }}
-                className="img-fluid w-60 pb-3rem"
+                className="img-fluid w-60 img-services pb-3rem"
                 src={char_services}
                 alt="Image Banner E-Catalog"
                 id="services"

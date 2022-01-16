@@ -265,6 +265,7 @@ h2{font-size: 36; font-weight: bold; margin-bottom: 0px;}
 .image_portfolio{
   width: 100%;
   max-width: 500px;
+  object-fit:scale-down;
   aspect-ratio: 900 / 600;
 }
 .text-white{

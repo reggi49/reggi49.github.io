@@ -245,10 +245,10 @@ h2{font-size: 36; font-weight: bold; margin-bottom: 0px;}
   text-align: justify;
   text-justify: inter-word;
   color: rgb(0, 0, 0);
-  padding: 0 5px 10px 5px;
+  padding: 10px 5px 10px 5px;
   display: block; /* Fallback for non-webkit */
   display: -webkit-box;
-  height: 4.5em; /* Fallback for non-webkit, line-height * 2 */
+  height: auto; /* Fallback for non-webkit, line-height * 2 */
   line-height: 1.3em;
   -webkit-line-clamp: 2; /* if you change this, make sure to change the fallback line-height and height */
   -webkit-box-orient: vertical;
@@ -370,7 +370,11 @@ h2{font-size: 36; font-weight: bold; margin-bottom: 0px;}
   border:2px solid #ffffff;
   border-radius: 100px;
 }
-
+.btn-custom{
+  color: rgb(255, 255, 255);
+  background: -webkit-linear-gradient(#eee, #8b7844);
+  border-color: #8b7844;
+}
 /* footer */
 .footer_{
   padding:30px 300px 25px 300px ;

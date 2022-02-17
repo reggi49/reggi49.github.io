@@ -11,7 +11,14 @@ import image_github from "./assets/img/github-icon.png";
 
 import Slider from 'react-slick';
 import Aos from "aos";
-import { BrowserRouter as Router, Route, Switch, Link, useParams } from 'react-router-dom';
+import {
+  HashRouter as Router,
+  Route,
+  Switch,
+  Link,
+  useParams,
+} from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import { createClient } from "contentful";
 
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -373,23 +380,20 @@ const Home = () => {
             </button>
           </div>
           <div className="collapse navbar-collapse menu-header">
-            <ul
-              className="nav navbar-nav navbar-right"
-              id="navbarNavDropdown"
-            >
+            <ul className="nav navbar-nav navbar-right" id="navbarNavDropdown">
               {/* <li className="active">
             <a href="#">
               About <span className="sr-only">(current)</span>
             </a>
           </li> */}
               <li>
-                <a href={hostUrl + "/#portfolio"}>Portfolio</a>
+                <HashLink to="#portfolio">Portfolio</HashLink>
               </li>
               <li>
-                <a href={hostUrl + "/#portfolio"}>Services</a>
+                <HashLink to="#services">Services</HashLink>
               </li>
               <li>
-                <a href={hostUrl + "/#contact"}>Contact</a>
+                <HashLink to="#contact">Contact</HashLink>
               </li>
               <li>
                 <a href="https://reggi49.medium.com/" target="_blank">
@@ -578,7 +582,7 @@ const Home = () => {
 
             {/* Services */}
             <div className="container-fluid white-zonk">
-              <div className="row">
+              <div className="row" id="services">
                 <div className="col-lg-12 p-0"></div>
               </div>
             </div>

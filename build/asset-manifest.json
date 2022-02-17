@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.c08d248f.chunk.css",
-    "main.js": "/static/js/main.fca4dc01.chunk.js",
-    "main.js.map": "/static/js/main.fca4dc01.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.f11e8e96.js",
-    "runtime-main.js.map": "/static/js/runtime-main.f11e8e96.js.map",
+    "main.css": "/static/css/main.997fdb42.chunk.css",
+    "main.js": "/static/js/main.4d8d1bb6.chunk.js",
+    "main.js.map": "/static/js/main.4d8d1bb6.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.bc52d465.js",
+    "runtime-main.js.map": "/static/js/runtime-main.bc52d465.js.map",
     "static/css/2.d8c42a87.chunk.css": "/static/css/2.d8c42a87.chunk.css",
-    "static/js/2.38cf1af0.chunk.js": "/static/js/2.38cf1af0.chunk.js",
-    "static/js/2.38cf1af0.chunk.js.map": "/static/js/2.38cf1af0.chunk.js.map",
-    "static/js/3.ca076633.chunk.js": "/static/js/3.ca076633.chunk.js",
-    "static/js/3.ca076633.chunk.js.map": "/static/js/3.ca076633.chunk.js.map",
+    "static/js/2.8a93515e.chunk.js": "/static/js/2.8a93515e.chunk.js",
+    "static/js/2.8a93515e.chunk.js.map": "/static/js/2.8a93515e.chunk.js.map",
+    "static/js/3.6182a5ea.chunk.js": "/static/js/3.6182a5ea.chunk.js",
+    "static/js/3.6182a5ea.chunk.js.map": "/static/js/3.6182a5ea.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.d8c42a87.chunk.css.map": "/static/css/2.d8c42a87.chunk.css.map",
-    "static/css/main.c08d248f.chunk.css.map": "/static/css/main.c08d248f.chunk.css.map",
-    "static/js/2.38cf1af0.chunk.js.LICENSE.txt": "/static/js/2.38cf1af0.chunk.js.LICENSE.txt",
+    "static/css/main.997fdb42.chunk.css.map": "/static/css/main.997fdb42.chunk.css.map",
+    "static/js/2.8a93515e.chunk.js.LICENSE.txt": "/static/js/2.8a93515e.chunk.js.LICENSE.txt",
     "static/media/Style_default.css": "/static/media/TrajanPro-Regular.82d61cae.ttf",
     "static/media/char-full.f31a973c.png": "/static/media/char-full.f31a973c.png",
     "static/media/char-services.10e62e2f.png": "/static/media/char-services.10e62e2f.png",
@@ -23,10 +23,10 @@
     "static/media/slick-theme.css": "/static/media/slick.c94f7671.ttf"
   },
   "entrypoints": [
-    "static/js/runtime-main.f11e8e96.js",
+    "static/js/runtime-main.bc52d465.js",
     "static/css/2.d8c42a87.chunk.css",
-    "static/js/2.38cf1af0.chunk.js",
-    "static/css/main.c08d248f.chunk.css",
-    "static/js/main.fca4dc01.chunk.js"
+    "static/js/2.8a93515e.chunk.js",
+    "static/css/main.997fdb42.chunk.css",
+    "static/js/main.4d8d1bb6.chunk.js"
   ]
 }

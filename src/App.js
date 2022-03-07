@@ -434,7 +434,7 @@ const Home = () => {
                   <div className="col-lg-8 text-justify pl-5r">
                     <h2 className="banner-title text-center pt-3r">Hi I'm Reggi</h2>
                     <h3 className="banner-subtitle text-center">
-                      Software Engineer Consultant
+                      Software Engineer
                     </h3>
                     <br></br>
                     <div style={{ font: 18, color: "#ffffff" }}>

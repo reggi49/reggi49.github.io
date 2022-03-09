@@ -359,28 +359,29 @@ const Home = () => {
   const Nav = ({ details }) => {
     return (
       <nav
-        className="navbar navbar-expand-lg navbar-light bg-transparent p-0"
+        style={{ backgroundColor: "#1E1D1D", borderColor: "#1E1D1D" }}
+        className="navbar navbar-inverse bg-transparent navbar-expand-lg p-0"
         role="navigation"
       >
         <div className="container-fluid">
           <div className="navbar-header">
             <button
               type="button"
-              className="navbar-toggle"
+              class="navbar-toggle collapsed"
               data-toggle="collapse"
               data-target="#navbarNavDropdown"
-              aria-controls="navbarNavDropdown"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
             >
-              <span className="sr-only">Toggle navigation</span>
-              <span className="icon-bar"></span>
-              <span className="icon-bar"></span>
-              <span className="icon-bar"></span>
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
             </button>
           </div>
-          <div className="collapse navbar-collapse menu-header">
-            <ul className="nav navbar-nav navbar-right" id="navbarNavDropdown">
+          <div
+            class="collapse navbar-collapse menu-header"
+            id="navbarNavDropdown"
+          >
+            <ul className="nav navbar-nav navbar-right">
               {/* <li className="active">
             <a href="#">
               About <span className="sr-only">(current)</span>

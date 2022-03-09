@@ -138,29 +138,41 @@ const Home = () => {
             <Nav details={true} />
           </div>
         </div>
-        <header class="masthead" style={{ backgroundImage: `url('https://startbootstrap.github.io/startbootstrap-clean-blog/assets/img/post-bg.jpg')` }}>
-          <div class="container position-relative px-4 px-lg-5">
-            <div class="drow gx-4 gx-lg-5 justify-content-center">
-              <div class="col-md-10 col-lg-8 col-xl-7">
-                <div class="post-heading">
+        <header
+          className="masthead"
+          style={{
+            backgroundImage: `url('https://startbootstrap.github.io/startbootstrap-clean-blog/assets/img/post-bg.jpg')`,
+          }}
+        >
+          <div className="container position-relative px-4 px-lg-5">
+            <div className="drow gx-4 gx-lg-5 justify-content-center">
+              <div className="col-md-10 col-lg-8 col-xl-7">
+                <div className="post-heading">
                   <h1>{portfolio == "" ? "" : portfolio.fields.title}</h1>
-                  <h2 class="subheading">{portfolio == "" ? "" : portfolio.fields.description}</h2>
-                  <span class="meta">
-                    Posted by {portfolio == "" ? "" : portfolio.fields.author.fields.name} 
+                  <h2 className="subheading">
+                    {portfolio == "" ? "" : portfolio.fields.description}
+                  </h2>
+                  <span className="meta">
+                    Posted by{" "}
+                    {portfolio == "" ? "" : portfolio.fields.author.fields.name}
                   </span>
                 </div>
               </div>
             </div>
           </div>
         </header>
-        <article class="mb-4">
-          <div class="container px-4 px-lg-5">
-          <ul class="breadcrumb">
-            <li><a href={hostUrl}>Home</a></li>
-            <li class="active">{portfolio == "" ? "" : portfolio.fields.title}</li>
-          </ul>
-            <div class="drow gx-4 gx-lg-5 justify-content-center pb-3rem">
-              <div class="col-md-10 col-lg-8 col-xl-7 ">
+        <article className="mb-4">
+          <div className="container px-4 px-lg-5">
+            <ul className="breadcrumb">
+              <li>
+                <a href={hostUrl}>Home</a>
+              </li>
+              <li className="active">
+                {portfolio == "" ? "" : portfolio.fields.title}
+              </li>
+            </ul>
+            <div className="drow gx-4 gx-lg-5 justify-content-center pb-3rem">
+              <div className="col-md-10 col-lg-8 col-xl-7 ">
                 {portfolio == "" ? "" : portfolio.fields.body}
               </div>
             </div>
@@ -367,18 +379,18 @@ const Home = () => {
           <div className="navbar-header">
             <button
               type="button"
-              class="navbar-toggle collapsed"
+              className="navbar-toggle collapsed"
               data-toggle="collapse"
               data-target="#navbarNavDropdown"
             >
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
+              <span className="sr-only">Toggle navigation</span>
+              <span className="icon-bar"></span>
+              <span className="icon-bar"></span>
+              <span className="icon-bar"></span>
             </button>
           </div>
           <div
-            class="collapse navbar-collapse menu-header"
+            className="collapse navbar-collapse menu-header"
             id="navbarNavDropdown"
           >
             <ul className="nav navbar-nav navbar-right">

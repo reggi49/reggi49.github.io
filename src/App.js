@@ -103,12 +103,13 @@ const Home = () => {
   }
 
   const getPortfolios = (slug) => {
+    setModal(true);
     setLoading(true);
-    if(portfolio == ''){
+    if (portfolio == "") {
       client
         .getEntries({
           content_type: "blogPost",
-          'fields.slug': slug,
+          "fields.slug": slug,
         })
         .then((portfolio) => {
           setPortfolio(portfolio.items[0]);
@@ -116,18 +117,18 @@ const Home = () => {
           setModal(true);
           // console.log(portfolio);
         })
-        .catch(err => {
+        .catch((err) => {
           // console.log(err)
           setLoading(false);
         });
-      }
-    setModal(false);
+    }
   }
 
   const Article = () => {
     const {slug} = useParams();
     useEffect(() => {
       getPortfolios(slug);
+      setModal(false);
     }, []);
     return (
       <>

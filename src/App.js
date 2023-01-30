@@ -113,21 +113,21 @@ const Home = () => {
         .then((portfolio) => {
           setPortfolio(portfolio.items[0]);
           setLoading(false);
-          console.log(portfolio);
+          setModal(true);
+          // console.log(portfolio);
         })
         .catch(err => {
-          console.log(err)
+          // console.log(err)
           setLoading(false);
         });
       }
-    setModal(true);
+    setModal(false);
   }
 
   const Article = () => {
     const {slug} = useParams();
     useEffect(() => {
-      // console.log('tes')
-       getPortfolios(slug);
+      getPortfolios(slug);
     }, []);
     return (
       <>
@@ -185,10 +185,13 @@ const Home = () => {
   const Modal = () => {
     const showHideClassName = modal ? 'modal display-block' : 'modal display-none';
     return (
-      <div className={showHideClassName} onClick={() => {
-        setModal(false)
-        setPortfolio('')
-        }}>
+      <div
+        className={showHideClassName}
+        onClick={() => {
+          setModal(false);
+          setPortfolio("");
+        }}
+      >
         <div className="modal-main" onClick={(e) => e.stopPropagation()}>
           <div className="modal-header">
             <button
@@ -197,8 +200,8 @@ const Home = () => {
               data-dismiss="modal"
               aria-label="Close"
               onClick={() => {
-                setPortfolio('')
-                setModal(false)
+                setPortfolio("");
+                setModal(false);
               }}
             >
               <span aria-hidden="true">×</span>

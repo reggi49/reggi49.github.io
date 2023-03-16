@@ -142,7 +142,11 @@ const Home = () => {
         <header
           className="masthead"
           style={{
-            backgroundImage: `url(${portfolio.fields.heroImage.fields.file.url || `https://startbootstrap.github.io/startbootstrap-clean-blog/assets/img/post-bg.jpg`})`,
+            backgroundImage: `url(${
+              portfolio == ""
+                ? ""
+                : portfolio.fields.heroImage.fields.file.url
+            })`,
           }}
         >
           <div className="container position-relative px-4 px-lg-5">

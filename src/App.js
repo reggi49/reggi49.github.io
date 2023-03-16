@@ -142,7 +142,7 @@ const Home = () => {
         <header
           className="masthead"
           style={{
-            backgroundImage: `url('https://startbootstrap.github.io/startbootstrap-clean-blog/assets/img/post-bg.jpg')`,
+            backgroundImage: `url(${portfolio.fields.heroImage.fields.file.url || `https://startbootstrap.github.io/startbootstrap-clean-blog/assets/img/post-bg.jpg`})`,
           }}
         >
           <div className="container position-relative px-4 px-lg-5">
@@ -341,7 +341,7 @@ const Home = () => {
             <div className="container ">
               <div className="row">
                 <div className="col-lg-12">
-                  <h5 className="jargon-footer1">Reggi © 2022</h5>
+                  <h5 className="jargon-footer1">Reggi © 2023</h5>
                   <h5 style={{ fontSize: "10px" }}>
                     <a href="http://www.freepik.com">
                       Cartoon Art Designed by pikisuperstar / Freepik

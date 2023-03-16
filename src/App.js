@@ -408,13 +408,13 @@ const Home = () => {
             </a>
           </li> */}
               <li>
-                <HashLink to="#portfolio">Portfolio</HashLink>
+                <HashLink to="/#portfolio">Portfolio</HashLink>
               </li>
               <li>
-                <HashLink to="#services">Services</HashLink>
+                <HashLink to="/#services">Services</HashLink>
               </li>
               <li>
-                <HashLink to="#contact">Contact</HashLink>
+                <HashLink to="/#contact">Contact</HashLink>
               </li>
               <li>
                 <a href="https://reggi49.medium.com/" target="_blank">

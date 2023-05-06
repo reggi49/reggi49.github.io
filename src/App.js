@@ -27,6 +27,8 @@ import "./assets/css/Style_default.css";
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import "aos/dist/aos.css";
+import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
+import 'react-vertical-timeline-component/style.min.css';
 
 const Home = () => {
   Aos.init({ duration: 1000 });
@@ -125,7 +127,7 @@ const Home = () => {
   }
 
   const Article = () => {
-    const {slug} = useParams();
+    const { slug } = useParams();
     useEffect(() => {
       getPortfolios(slug);
       setModal(false);
@@ -142,11 +144,10 @@ const Home = () => {
         <header
           className="masthead"
           style={{
-            backgroundImage: `url(${
-              portfolio == ""
+            backgroundImage: `url(${portfolio == ""
                 ? ""
                 : portfolio.fields.heroImage.fields.file.url
-            })`,
+              })`,
           }}
         >
           <div className="container position-relative px-4 px-lg-5">
@@ -517,7 +518,7 @@ const Home = () => {
                                   <div className="d-flex flex-row mb-3">
                                     <a onClick={() => {
                                       getPortfolios(item.fields.slug);
-                                      }} >
+                                    }} >
                                       <img
                                         className="image_portfolio"
                                         src={item.fields.heroImage.fields.file.url}
@@ -642,6 +643,129 @@ const Home = () => {
                   </div>
                 </div>
               </div>
+            </div>
+
+            <div className="container-fluid white-zonk">
+              <div className="row">
+                <div className="col-lg-12 p-0"></div>
+              </div>
+            </div>
+
+            <div className="container-fluid bg-detail-product mt-5 mb-5">
+              {/* Timeline Project */}
+              <div className="col-lg-12 pb-3rem">
+                <h2 className="title-detail-produk text-center pb-2r">
+                  Project & Development
+                </h2>
+                <h4 className="text-center text-white pb-2r">
+                  Showcase of my latest works, projects and developments.
+                  <br></br>
+                </h4>
+              </div>
+              
+              <div className="container-fluid white-zonk">
+                <div className="row">
+                  <div className="col-lg-12 p-0"></div>
+                </div>
+              </div> 
+              <div className="container-fluid white-zonk">
+                <div className="row">
+                  <div className="col-lg-12 p-0"></div>
+                </div>
+              </div>
+              
+              <VerticalTimeline>
+                <VerticalTimelineElement
+                  className="vertical-timeline-element--work"
+                  contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+                  contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
+                  date="2011 - present"
+                  iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+                  icon={""}
+                >
+                  <h3 className="vertical-timeline-element-title">Creative Director</h3>
+                  <h4 className="vertical-timeline-element-subtitle">Miami, FL</h4>
+                  <p>
+                    Creative Direction, User Experience, Visual Design, Project Management, Team Leading
+                  </p>
+                </VerticalTimelineElement>
+                <VerticalTimelineElement
+                  className="vertical-timeline-element--work"
+                  date="2010 - 2011"
+                  iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+                  icon={""}
+                >
+                  <h3 className="vertical-timeline-element-title">Art Director</h3>
+                  <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>
+                  <p>
+                    Creative Direction, User Experience, Visual Design, SEO, Online Marketing
+                  </p>
+                </VerticalTimelineElement>
+                <VerticalTimelineElement
+                  className="vertical-timeline-element--work"
+                  date="2008 - 2010"
+                  iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+                  icon={""}
+                >
+                  <h3 className="vertical-timeline-element-title">Web Designer</h3>
+                  <h4 className="vertical-timeline-element-subtitle">Los Angeles, CA</h4>
+                  <p>
+                    User Experience, Visual Design
+                  </p>
+                </VerticalTimelineElement>
+                <VerticalTimelineElement
+                  className="vertical-timeline-element--work"
+                  date="2006 - 2008"
+                  iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+                  icon={""}
+                >
+                  <h3 className="vertical-timeline-element-title">Web Designer</h3>
+                  <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>
+                  <p>
+                    User Experience, Visual Design
+                  </p>
+                </VerticalTimelineElement>
+                <VerticalTimelineElement
+                  className="vertical-timeline-element--education"
+                  date="April 2013"
+                  iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
+                  icon={""}
+                >
+                  <h3 className="vertical-timeline-element-title">Content Marketing for Web, Mobile and Social Media</h3>
+                  <h4 className="vertical-timeline-element-subtitle">Online Course</h4>
+                  <p>
+                    Strategy, Social Media
+                  </p>
+                </VerticalTimelineElement>
+                <VerticalTimelineElement
+                  className="vertical-timeline-element--education"
+                  date="November 2012"
+                  iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
+                  icon={""}
+                >
+                  <h3 className="vertical-timeline-element-title">Agile Development Scrum Master</h3>
+                  <h4 className="vertical-timeline-element-subtitle">Certification</h4>
+                  <p>
+                    Creative Direction, User Experience, Visual Design
+                  </p>
+                </VerticalTimelineElement>
+                <VerticalTimelineElement
+                  className="vertical-timeline-element--education"
+                  date="2002 - 2006"
+                  iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
+                  icon={""}
+                >
+                  <h3 className="vertical-timeline-element-title">Bachelor of Science in Interactive Digital Media Visual Imaging</h3>
+                  <h4 className="vertical-timeline-element-subtitle">Bachelor Degree</h4>
+                  <p>
+                    Creative Direction, Visual Design
+                  </p>
+                </VerticalTimelineElement>
+                {/* <VerticalTimelineElement
+                  iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
+                  icon={""}
+                /> */}
+              </VerticalTimeline>
             </div>
 
             <div className="container-fluid white-zonk">

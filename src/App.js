@@ -20,6 +20,7 @@ import {
 } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import { createClient } from "contentful";
+import ReactMarkdown from 'react-markdown'
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./assets/css/App.css";
@@ -196,7 +197,7 @@ const Home = () => {
             </ul>
             <div className="drow gx-4 gx-lg-5 justify-content-center pb-3rem">
               <div className="col-md-10 col-lg-8 col-xl-7 ">
-                {portfolio == "" ? "" : portfolio.fields.body}
+                {portfolio == "" ? "" : <ReactMarkdown children={portfolio.fields.body}/>}
               </div>
             </div>
           </div>

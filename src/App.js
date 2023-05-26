@@ -21,6 +21,7 @@ import {
 import { HashLink } from "react-router-hash-link";
 import { createClient } from "contentful";
 import ReactMarkdown from 'react-markdown'
+import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./assets/css/App.css";
@@ -28,7 +29,6 @@ import "./assets/css/Style_default.css";
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import "aos/dist/aos.css";
-import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 
 const Home = () => {
@@ -144,6 +144,15 @@ const Home = () => {
     }
   }
 
+  const navbarFunction = () => {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " collapse navbar-collapse menu-header responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+
   const Article = () => {
     const { slug } = useParams();
     useEffect(() => {
@@ -255,7 +264,7 @@ const Home = () => {
               </p>
               <Link
                 className="posts__post"
-                // key={portfolio.fields.body}
+                // key={portfolio.fields.slug}
                 to={portfolio == "" ? "/" : "/" + portfolio.fields.slug}
               >
                 <button
@@ -375,22 +384,6 @@ const Home = () => {
             </div>
           </div>
         </section>
-
-        <script
-          src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-          integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-          crossOrigin="anonymous"
-        ></script>
-        <script
-          src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/ulg/popper.min.js"
-          integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-          crossOrigin="anonymous"
-        ></script>
-        <script
-          src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-          integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-          crossOrigin="anonymous"
-        ></script>
       </div>
     );
   }
@@ -406,9 +399,11 @@ const Home = () => {
           <div className="navbar-header">
             <button
               type="button"
-              className="navbar-toggle collapsed"
+              className="navbar-toggle"
               data-toggle="collapse"
-              data-target="#navbarNavDropdown"
+              onClick={() => {
+                navbarFunction();
+              }}
             >
               <span className="sr-only">Toggle navigation</span>
               <span className="icon-bar"></span>
@@ -417,15 +412,13 @@ const Home = () => {
             </button>
           </div>
           <div
-            className="collapse navbar-collapse menu-header"
-            id="navbarNavDropdown"
+            className="collapse navbar-collapse menu-header topnav"
+            id="myTopnav"
           >
             <ul className="nav navbar-nav navbar-right">
-              {/* <li className="active">
-            <a href="#">
-              About <span className="sr-only">(current)</span>
-            </a>
-          </li> */}
+              <li>
+                <HashLink to="/#">Home</HashLink>
+              </li>
               <li>
                 <HashLink to="/#portfolio">Portfolio</HashLink>
               </li>
@@ -435,9 +428,11 @@ const Home = () => {
               <li>
                 <HashLink to="/#contact">Contact</HashLink>
               </li>
-              <li>
-                <a href="https://reggi49.medium.com/" target="_blank">
+              <li >
+                {/* className="active"*/}
+                <a href="https://reggi49.medium.com/" target="_blank" rel="noreferrer">
                   Blog
+                  {/* Blog <span className="sr-only">(current)</span> */}
                 </a>
               </li>
             </ul>
@@ -450,6 +445,7 @@ const Home = () => {
     fetchWebsite();
     fetchMobile(); 
     fetchProject();
+    navbarFunction();
   }, []);
 
   return (
@@ -696,11 +692,11 @@ const Home = () => {
               <VerticalTimeline>
                 {projects.map((item, key) => (
                   <VerticalTimelineElement
+                    key={key}
                     className="vertical-timeline-element--work"
                     date={new Date(item.fields.publishDate).toDateString()} 
                     dateClassName={"title-detail-produk lead"}
                     iconStyle={{ background: '-webkit-linear-gradient(#eee, #8b7844)' }}
-                    icon={""}
                   >
                     <h3 className="vertical-timeline-element-title">{item.fields.title}</h3>
                     <div className="card">
@@ -716,7 +712,6 @@ const Home = () => {
                         ></img>
                       </div>
                     </div>
-                    {/* <h4 className="vertical-timeline-element-subtitle">{item.fields.title}</h4> */}
                     <p className="text_body_portfolio text-center">
                       {loading == true
                         ? "Getting Description ..."
@@ -724,7 +719,7 @@ const Home = () => {
                     </p>
                     <Link
                       className="posts__post"
-                      // key={portfolio.fields.body}
+                      key={item.fields.slug}
                       to={item == "" ? "/" : "/" + item.fields.slug}
                     >
                       <button
@@ -736,12 +731,7 @@ const Home = () => {
                       </button>
                     </Link>
                 </VerticalTimelineElement>
-                  
                 ))}
-                {/* <VerticalTimelineElement
-                  iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
-                  icon={""}
-                /> */}
               </VerticalTimeline>
             </div>
 
